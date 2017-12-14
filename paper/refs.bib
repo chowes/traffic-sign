@@ -1,0 +1,873 @@
+
+@inproceedings{amatya_what_2017,
+	address = {New York, NY, USA},
+	series = {{EuroMPI} '17},
+	title = {What {Does} {Fault} {Tolerant} {Deep} {Learning} {Need} from {MPI}?},
+	isbn = {978-1-4503-4849-2},
+	url = {http://doi.acm.org/10.1145/3127024.3127037},
+	doi = {10.1145/3127024.3127037},
+	abstract = {Deep Learning (DL) algorithms have become the de facto Machine Learning (ML) algorithm for large scale data analysis. DL algorithms are computationally expensive -- even distributed DL implementations which use MPI require days of training (model learning) time on commonly studied datasets. Long running DL applications become susceptible to faults -- requiring development of a fault tolerant system infrastructure, in addition to fault tolerant DL algorithms. This raises an important question: What is needed from MPI for designing fault tolerant DL implementations? In this paper, we address this problem for permanent faults. We motivate the need for a fault tolerant MPI specification by an in-depth consideration of recent innovations in DL algorithms and their properties, which drive the need for specific fault tolerance features. We present an in-depth discussion on the suitability of different parallelism types (model, data and hybrid); a need (or lack thereof) for check-pointing of any critical data structures; and most importantly, consideration for several fault tolerance proposals (user-level fault mitigation (ULFM), Reinit) in MPI and their applicability to fault tolerant DL implementations. We leverage a distributed memory implementation of Caffe, currently available under the Machine Learning Toolkit for Extreme Scale (MaTEx). We implement our approaches by extending MaTEx-Caffe for using ULFM-based implementation. Our evaluation using the ImageNet dataset and AlexNet, and GoogLeNet neural network topologies demonstrates the effectiveness of the proposed fault tolerant DL implementation using OpenMPI based ULFM.},
+	booktitle = {Proceedings of the 24th {European} {MPI} {Users}' {Group} {Meeting}},
+	publisher = {ACM},
+	author = {Amatya, Vinay and Vishnu, Abhinav and Siegel, Charles and Daily, Jeff},
+	year = {2017},
+	pages = {13:1--13:11},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/SESSGXZN/Amatya et al. - 2017 - What Does Fault Tolerant Deep Learning Need from M.pdf:application/pdf}
+}
+
+@phdthesis{maji_fast_2009,
+	title = {Fast and {Accurate} {Digit} {Classification}},
+	school = {Berkeley},
+	author = {Maji, Subhransu and Malik, Jitendra},
+	year = {2009}
+}
+
+@misc{noauthor_laboratory_nodate,
+	title = {Laboratory for {Intelligent} and {Safe} {Automobiles} - {CVRR} - {UCSD}},
+	url = {http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html},
+	urldate = {2017-11-01}
+}
+
+@inproceedings{houben_detection_2013,
+	title = {Detection of traffic signs in real-world images: {The} {German} traffic sign detection benchmark},
+	shorttitle = {Detection of traffic signs in real-world images},
+	doi = {10.1109/IJCNN.2013.6706807},
+	abstract = {Real-time detection of traffic signs, the task of pinpointing a traffic sign's location in natural images, is a challenging computer vision task of high industrial relevance. Various algorithms have been proposed, and advanced driver assistance systems supporting detection and recognition of traffic signs have reached the market. Despite the many competing approaches, there is no clear consensus on what the state-of-the-art in this field is. This can be accounted to the lack of comprehensive, unbiased comparisons of those methods. We aim at closing this gap by the “German Traffic Sign Detection Benchmark” presented as a competition at IJCNN 2013 (International Joint Conference on Neural Networks). We introduce a real-world benchmark data set for traffic sign detection together with carefully chosen evaluation metrics, baseline results, and a web-interface for comparing approaches. In our evaluation, we separate sign detection from classification, but still measure the performance on relevant categories of signs to allow for benchmarking specialized solutions. The considered baseline algorithms represent some of the most popular detection approaches such as the Viola-Jones detector based on Haar features and a linear classifier relying on HOG descriptors. Further, a recently proposed problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme is evaluated. Finally, we present the best-performing algorithms of the IJCNN competition.},
+	booktitle = {The 2013 {International} {Joint} {Conference} on {Neural} {Networks} ({IJCNN})},
+	author = {Houben, S. and Stallkamp, J. and Salmen, J. and Schlipsing, M. and Igel, C.},
+	month = aug,
+	year = {2013},
+	keywords = {computer vision, driver information systems, feature extraction, object detection, traffic sign recognition, baseline algorithms, Benchmark testing, computer vision task, Detectors, driver assistance systems, evaluation metrics, German traffic sign detection benchmark, Haar features, HOG descriptors, IJCNN competition, image classification, Image color analysis, image colour analysis, Image edge detection, linear classifier, model-based Hough-like voting scheme, object recognition, performance measurement, real-world images, Shape, shape recognition, traffic sign location, Training, Viola-Jones detector, Web-interface},
+	pages = {1--8},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/FI3GDD89/6706807.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/BUM2I8VW/Houben et al. - 2013 - Detection of traffic signs in real-world images T.pdf:application/pdf}
+}
+
+@inproceedings{sermanet_convolutional_2012,
+	title = {Convolutional neural networks applied to house numbers digit classification},
+	abstract = {We classify digits of real-world house numbers using convolutional neural networks (ConvNets). Con-vNets are hierarchical feature learning neural networks whose structure is biologically inspired. Unlike many popular vision approaches that are hand-designed, ConvNets can automatically learn a unique set of features optimized for a given task. We augmented the traditional ConvNet architecture by learning multi-stage features and by using Lp pooling and establish a new state-of-the-art of 95.10\% accuracy on the SVHN dataset (48\% error improvement). Furthermore, we analyze the benefits of different pooling methods and multi-stage features in ConvNets. The source code and a tutorial are available at eblearn.sf.net.},
+	booktitle = {Proceedings of the 21st {International} {Conference} on {Pattern} {Recognition} ({ICPR}2012)},
+	author = {Sermanet, P. and Chintala, S. and LeCun, Y.},
+	month = nov,
+	year = {2012},
+	keywords = {computer vision, feature extraction, learning (artificial intelligence), Training, Accuracy, Biological neural networks, biologically inspired structure, ConvNets, Convolutional codes, convolutional neural network, Error analysis, feature optimization, handwritten character recognition, hierarchical feature learning neural network, house number digit classification, Lp pooling method, multistage feature, neural nets, optimisation, Pattern recognition, source code, SVHN dataset},
+	pages = {3288--3291},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/8J44PZT4/6460867.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/MMU7QIFB/Sermanet et al. - 2012 - Convolutional neural networks applied to house num.pdf:application/pdf}
+}
+
+@article{mogelmose_vision-based_2012,
+	title = {Vision-{Based} {Traffic} {Sign} {Detection} and {Analysis} for {Intelligent} {Driver} {Assistance} {Systems}: {Perspectives} and {Survey}},
+	volume = {13},
+	issn = {1524-9050},
+	shorttitle = {Vision-{Based} {Traffic} {Sign} {Detection} and {Analysis} for {Intelligent} {Driver} {Assistance} {Systems}},
+	doi = {10.1109/TITS.2012.2209421},
+	abstract = {In this paper, we provide a survey of the traffic sign detection literature, detailing detection systems for traffic sign recognition (TSR) for driver assistance. We separately describe the contributions of recent works to the various stages inherent in traffic sign detection: segmentation, feature extraction, and final sign detection. While TSR is a well-established research area, we highlight open research issues in the literature, including a dearth of use of publicly available image databases and the over-representation of European traffic signs. Furthermore, we discuss future directions of TSR research, including the integration of context and localization. We also introduce a new public database containing U.S. traffic signs.},
+	number = {4},
+	journal = {IEEE Transactions on Intelligent Transportation Systems},
+	author = {Mogelmose, A. and Trivedi, M. M. and Moeslund, T. B.},
+	month = dec,
+	year = {2012},
+	keywords = {active safety, automated highways, computer vision, detection system, driver information systems, European traffic sign, feature extraction, Human computer interaction, human-centered computing, image database, image recognition, image segmentation, intelligent driver assistance system, learning (artificial intelligence), Machine learning, Machine vision, object detection, road safety, road traffic, segmentation, traffic sign recognition, TSR, US traffic sign, vision-based traffic sign detection},
+	pages = {1484--1497},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/X4K4WQBT/6335478.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/B9IW65GX/Mogelmose et al. - 2012 - Vision-Based Traffic Sign Detection and Analysis f.pdf:application/pdf}
+}
+
+@article{stallkamp_man_2012,
+	series = {Selected {Papers} from {IJCNN} 2011},
+	title = {Man vs. computer: {Benchmarking} machine learning algorithms for traffic sign recognition},
+	volume = {32},
+	issn = {0893-6080},
+	shorttitle = {Man vs. computer},
+	url = {http://www.sciencedirect.com/science/article/pii/S0893608012000457},
+	doi = {10.1016/j.neunet.2012.02.016},
+	abstract = {Traffic signs are characterized by a wide variability in their visual appearance in real-world environments. For example, changes of illumination, varying weather conditions and partial occlusions impact the perception of road signs. In practice, a large number of different sign classes needs to be recognized with very high accuracy. Traffic signs have been designed to be easily readable for humans, who perform very well at this task. For computer systems, however, classifying traffic signs still seems to pose a challenging pattern recognition problem. Both image processing and machine learning algorithms are continuously refined to improve on this task. But little systematic comparison of such systems exist. What is the status quo? Do today’s algorithms reach human performance? For assessing the performance of state-of-the-art machine learning algorithms, we present a publicly available traffic sign dataset with more than 50,000 images of German road signs in 43 classes. The data was considered in the second stage of the German Traffic Sign Recognition Benchmark held at IJCNN 2011. The results of this competition are reported and the best-performing algorithms are briefly described. Convolutional neural networks (CNNs) showed particularly high classification accuracies in the competition. We measured the performance of human subjects on the same data—and the CNNs outperformed the human test persons.},
+	number = {Supplement C},
+	journal = {Neural Networks},
+	author = {Stallkamp, J. and Schlipsing, M. and Salmen, J. and Igel, C.},
+	month = aug,
+	year = {2012},
+	keywords = {Machine learning, traffic sign recognition, Benchmarking, Convolutional neural networks},
+	pages = {323--332},
+	file = {ScienceDirect Full Text PDF:/home/chowes/Zotero/storage/Z5IKGECM/Stallkamp et al. - 2012 - Man vs. computer Benchmarking machine learning al.pdf:application/pdf;ScienceDirect Snapshot:/home/chowes/Zotero/storage/PPMUM6Q6/S0893608012000457.html:text/html}
+}
+
+@inproceedings{ciresan_committee_2011,
+	title = {A committee of neural networks for traffic sign classification},
+	doi = {10.1109/IJCNN.2011.6033458},
+	abstract = {We describe the approach that won the preliminary phase of the German traffic sign recognition benchmark with a better-than-human recognition rate of 98.98\%.We obtain an even better recognition rate of 99.15\% by further training the nets. Our fast, fully parameterizable GPU implementation of a Convolutional Neural Network does not require careful design of pre-wired feature extractors, which are rather learned in a supervised way. A CNN/MLP committee further boosts recognition performance.},
+	booktitle = {The 2011 {International} {Joint} {Conference} on {Neural} {Networks}},
+	author = {Cireşan, D. and Meier, U. and Masci, J. and Schmidhuber, J.},
+	month = jul,
+	year = {2011},
+	keywords = {image recognition, learning (artificial intelligence), Image color analysis, Training, Biological neural networks, Convolutional codes, convolutional neural network, Error analysis, neural nets, better-than-human recognition rate, German Traffic Sign Recognition Benchmark, Kernel, Neurons, parameterizable GPU implementation, Supervised learning, traffic engineering computing, traffic sign classification},
+	pages = {1918--1921},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/XU5SEFGA/6033458.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/MHPWWVHD/Cireşan et al. - 2011 - A committee of neural networks for traffic sign cl.pdf:application/pdf}
+}
+
+@inproceedings{sermanet_traffic_2011,
+	title = {Traffic sign recognition with multi-scale {Convolutional} {Networks}},
+	doi = {10.1109/IJCNN.2011.6033589},
+	abstract = {We apply Convolutional Networks (ConvNets) to the task of traffic sign classification as part of the GTSRB competition. ConvNets are biologically-inspired multi-stage architectures that automatically learn hierarchies of invariant features. While many popular vision approaches use hand-crafted features such as HOG or SIFT, ConvNets learn features at every level from data that are tuned to the task at hand. The traditional ConvNet architecture was modified by feeding 1st stage features in addition to 2nd stage features to the classifier. The system yielded the 2nd-best accuracy of 98.97\% during phase I of the competition (the best entry obtained 98.98\%), above the human performance of 98.81\%, using 32×32 color input images. Experiments conducted after phase 1 produced a new record of 99.17\% by increasing the network capacity, and by using greyscale images instead of color. Interestingly, random features still yielded competitive results (97.33\%).},
+	booktitle = {The 2011 {International} {Joint} {Conference} on {Neural} {Networks}},
+	author = {Sermanet, P. and LeCun, Y.},
+	month = jul,
+	year = {2011},
+	keywords = {computer vision, feature extraction, traffic sign recognition, image classification, Image color analysis, image colour analysis, Training, Accuracy, traffic engineering computing, traffic sign classification, Color, Computer architecture, greyscale images, GTSRB competition, hand-crafted features, hierarchy learning, HOG, multiscale convolutional network, multistage architecture, Neural networks, SIFT, vision approach},
+	pages = {2809--2813},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/X6DJQ6AT/6033589.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/XBVSTQUI/Sermanet and LeCun - 2011 - Traffic sign recognition with multi-scale Convolut.pdf:application/pdf}
+}
+
+@article{schmidhuber_deep_2015,
+	title = {Deep learning in neural networks: {An} overview},
+	volume = {61},
+	issn = {0893-6080},
+	shorttitle = {Deep learning in neural networks},
+	url = {http://www.sciencedirect.com/science/article/pii/S0893608014002135},
+	doi = {10.1016/j.neunet.2014.09.003},
+	abstract = {In recent years, deep artificial neural networks (including recurrent ones) have won numerous contests in pattern recognition and machine learning. This historical survey compactly summarizes relevant work, much of it from the previous millennium. Shallow and Deep Learners are distinguished by the depth of their credit assignment paths, which are chains of possibly learnable, causal links between actions and effects. I review deep supervised learning (also recapitulating the history of backpropagation), unsupervised learning, reinforcement learning \& evolutionary computation, and indirect search for short programs encoding deep and large networks.},
+	number = {Supplement C},
+	journal = {Neural Networks},
+	author = {Schmidhuber, Jürgen},
+	month = jan,
+	year = {2015},
+	keywords = {Supervised learning, Deep learning, Evolutionary computation, Reinforcement learning, Unsupervised learning},
+	pages = {85--117},
+	file = {ScienceDirect Full Text PDF:/home/chowes/Zotero/storage/DQIEGJJZ/Schmidhuber - 2015 - Deep learning in neural networks An overview.pdf:application/pdf;ScienceDirect Snapshot:/home/chowes/Zotero/storage/IWRJ752Z/S0893608014002135.html:text/html}
+}
+
+@article{greenhalgh_real-time_2012,
+	title = {Real-{Time} {Detection} and {Recognition} of {Road} {Traffic} {Signs}},
+	volume = {13},
+	issn = {1524-9050},
+	doi = {10.1109/TITS.2012.2208909},
+	abstract = {This paper proposes a novel system for the automatic detection and recognition of traffic signs. The proposed system detects candidate regions as maximally stable extremal regions (MSERs), which offers robustness to variations in lighting conditions. Recognition is based on a cascade of support vector machine (SVM) classifiers that were trained using histogram of oriented gradient (HOG) features. The training data are generated from synthetic template images that are freely available from an online database; thus, real footage road signs are not required as training data. The proposed system is accurate at high vehicle speeds, operates under a range of weather conditions, runs at an average speed of 20 frames per second, and recognizes all classes of ideogram-based (nontext) traffic symbols from an online road sign database. Comprehensive comparative results to illustrate the performance of the system are presented.},
+	number = {4},
+	journal = {IEEE Transactions on Intelligent Transportation Systems},
+	author = {Greenhalgh, J. and Mirmehdi, M.},
+	month = dec,
+	year = {2012},
+	keywords = {computer vision, feature extraction, Machine learning, object detection, road traffic, traffic sign recognition, image classification, Shape, automatic detection, character recognition, Histogram of oriented gradient (HOG) features, histogram of oriented gradient features, Histograms, HOG features, ideogram-based traffic symbols, lighting, lighting conditions, maximally stable extremal regions, maximally stable extremal regions (MSERs), MSER, online road sign database, real footage road signs, real-time road traffic sign detection, real-time systems, road traffic sign recognition, support vector machine classifiers, Support vector machines, support vector machines (SVMs), SVM classifiers, synthetic data, synthetic template images, training data, visual databases, weather conditions},
+	pages = {1498--1506},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/PXRZS3G9/6287592.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/T4BSM7NS/Greenhalgh and Mirmehdi - 2012 - Real-Time Detection and Recognition of Road Traffi.pdf:application/pdf}
+}
+
+@inproceedings{mathias_traffic_2013,
+	title = {Traffic sign recognition \#x2014; {How} far are we from the solution?},
+	doi = {10.1109/IJCNN.2013.6707049},
+	abstract = {Traffic sign recognition has been a recurring application domain for visual objects detection. The public datasets have only recently reached large enough size and variety to enable proper empirical studies. We revisit the topic by showing how modern methods perform on two large detection and classification datasets (thousand of images, tens of categories) captured in Belgium and Germany. We show that, without any application specific modification, existing methods for pedestrian detection, and for digit and face classification; can reach performances in the range of 95\% 99\% of the perfect solution. We show detailed experiments and discuss the trade-off of different options. Our top performing methods use modern variants of HOG features for detection, and sparse representations for classification.},
+	booktitle = {The 2013 {International} {Joint} {Conference} on {Neural} {Networks} ({IJCNN})},
+	author = {Mathias, M. and Timofte, R. and Benenson, R. and Gool, L. Van},
+	month = aug,
+	year = {2013},
+	keywords = {feature extraction, object detection, road traffic, traffic sign recognition, Benchmark testing, Detectors, image classification, Image color analysis, Training, traffic engineering computing, HOG features, Support vector machines, Belgium, classification datasets, detection datasets, digit classification, face classification, Germany, image representation, pedestrian detection, pedestrians, public datasets, sparse representations, visual objects detection},
+	pages = {1--8},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/E5F564JU/6707049.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/B5ZTBRQK/Mathias et al. - 2013 - Traffic sign recognition #x2014\; How far are we fr.pdf:application/pdf}
+}
+
+@article{ciresan_multi-column_2012,
+	series = {Selected {Papers} from {IJCNN} 2011},
+	title = {Multi-column deep neural network for traffic sign classification},
+	volume = {32},
+	issn = {0893-6080},
+	url = {http://www.sciencedirect.com/science/article/pii/S0893608012000524},
+	doi = {10.1016/j.neunet.2012.02.023},
+	abstract = {We describe the approach that won the final phase of the German traffic sign recognition benchmark. Our method is the only one that achieved a better-than-human recognition rate of 99.46\%. We use a fast, fully parameterizable GPU implementation of a Deep Neural Network (DNN) that does not require careful design of pre-wired feature extractors, which are rather learned in a supervised way. Combining various DNNs trained on differently preprocessed data into a Multi-Column DNN (MCDNN) further boosts recognition performance, making the system insensitive also to variations in contrast and illumination.},
+	number = {Supplement C},
+	journal = {Neural Networks},
+	author = {Cireşan, Dan and Meier, Ueli and Masci, Jonathan and Schmidhuber, Jürgen},
+	month = aug,
+	year = {2012},
+	keywords = {image classification, Deep neural networks, Image preprocessing, Traffic signs},
+	pages = {333--338},
+	file = {ScienceDirect Full Text PDF:/home/chowes/Zotero/storage/7M2EBRIZ/Cireşan et al. - 2012 - Multi-column deep neural network for traffic sign .pdf:application/pdf;ScienceDirect Snapshot:/home/chowes/Zotero/storage/69RWPIIX/S0893608012000524.html:text/html}
+}
+
+@inproceedings{liu_ssd:_2016,
+	series = {Lecture {Notes} in {Computer} {Science}},
+	title = {{SSD}: {Single} {Shot} {MultiBox} {Detector}},
+	isbn = {978-3-319-46447-3 978-3-319-46448-0},
+	shorttitle = {{SSD}},
+	url = {https://link-springer-com.subzero.lib.uoguelph.ca/chapter/10.1007/978-3-319-46448-0_2},
+	doi = {10.1007/978-3-319-46448-0_2},
+	abstract = {We present a method for detecting objects in images using a single deep neural network. Our approach, named SSD, discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. Additionally, the network combines predictions from multiple feature maps with different resolutions to naturally handle objects of various sizes. SSD is simple relative to methods that require object proposals because it completely eliminates proposal generation and subsequent pixel or feature resampling stages and encapsulates all computation in a single network. This makes SSD easy to train and straightforward to integrate into systems that require a detection component. Experimental results on the PASCAL VOC, COCO, and ILSVRC datasets confirm that SSD has competitive accuracy to methods that utilize an additional object proposal step and is much faster, while providing a unified framework for both training and inference. For 300×300300×300300 {\textbackslash}times 300 input, SSD achieves 74.3 \% mAP on VOC2007 test at 59 FPS on a Nvidia Titan X and for 512×512512×512512 {\textbackslash}times 512 input, SSD achieves 76.9 \% mAP, outperforming a comparable state of the art Faster R-CNN model. Compared to other single stage methods, SSD has much better accuracy even with a smaller input image size. Code is available at https://github-com.subzero.lib.uoguelph.ca/weiliu89/caffe/tree/ssd.},
+	language = {en},
+	urldate = {2017-10-31},
+	booktitle = {Computer {Vision} – {ECCV} 2016},
+	publisher = {Springer, Cham},
+	author = {Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C.},
+	month = oct,
+	year = {2016},
+	pages = {21--37},
+	file = {Full Text PDF:/home/chowes/Zotero/storage/9ICEGN5A/Liu et al. - 2016 - SSD Single Shot MultiBox Detector.pdf:application/pdf;Snapshot:/home/chowes/Zotero/storage/X6WCEKVG/10.html:text/html}
+}
+
+@inproceedings{stallkamp_german_2011,
+	title = {The {German} {Traffic} {Sign} {Recognition} {Benchmark}: {A} multi-class classification competition},
+	shorttitle = {The {German} {Traffic} {Sign} {Recognition} {Benchmark}},
+	doi = {10.1109/IJCNN.2011.6033395},
+	abstract = {The “German Traffic Sign Recognition Benchmark” is a multi-category classification competition held at IJCNN 2011. Automatic recognition of traffic signs is required in advanced driver assistance systems and constitutes a challenging real-world computer vision and pattern recognition problem. A comprehensive, lifelike dataset of more than 50,000 traffic sign images has been collected. It reflects the strong variations in visual appearance of signs due to distance, illumination, weather conditions, partial occlusions, and rotations. The images are complemented by several precomputed feature sets to allow for applying machine learning algorithms without background knowledge in image processing. The dataset comprises 43 classes with unbalanced class frequencies. Participants have to classify two test sets of more than 12,500 images each. Here, the results on the first of these sets, which was used in the first evaluation stage of the two-fold challenge, are reported. The methods employed by the participants who achieved the best results are briefly described and compared to human traffic sign recognition performance and baseline results.},
+	booktitle = {The 2011 {International} {Joint} {Conference} on {Neural} {Networks}},
+	author = {Stallkamp, J. and Schlipsing, M. and Salmen, J. and Igel, C.},
+	month = jul,
+	year = {2011},
+	keywords = {computer vision, driver information systems, learning (artificial intelligence), Benchmark testing, image classification, Image color analysis, Training, German Traffic Sign Recognition Benchmark, traffic engineering computing, Histograms, driver assistance system, Humans, image processing, Image resolution, Lead, machine learning algorithm, multiclass classification competition, pattern recognition problem},
+	pages = {1453--1460},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/7Z4STF4G/6033395.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/AKTSU8HW/Stallkamp et al. - 2011 - The German Traffic Sign Recognition Benchmark A m.pdf:application/pdf}
+}
+
+@article{lu_survey_2007,
+	title = {A survey of image classification methods and techniques for improving classification performance},
+	volume = {28},
+	issn = {0143-1161, 1366-5901},
+	url = {http://www.tandfonline.com/doi/abs/10.1080/01431160600746456},
+	doi = {10.1080/01431160600746456},
+	language = {en},
+	number = {5},
+	urldate = {2017-10-30},
+	journal = {International Journal of Remote Sensing},
+	author = {Lu, D. and Weng, Q.},
+	month = mar,
+	year = {2007},
+	pages = {823--870}
+}
+
+@article{khan_image_2011,
+	title = {Image {Segmentation} and {Shape} {Analysis} for {Road}-{Sign} {Detection}},
+	volume = {12},
+	issn = {1524-9050, 1558-0016},
+	url = {http://ieeexplore.ieee.org/document/5597944/},
+	doi = {10.1109/TITS.2010.2073466},
+	number = {1},
+	urldate = {2017-10-30},
+	journal = {IEEE Transactions on Intelligent Transportation Systems},
+	author = {Khan, Jesmin F. and Bhuiyan, Sharif M. A. and Adhami, Reza R.},
+	month = mar,
+	year = {2011},
+	pages = {83--96}
+}
+
+@misc{noauthor_linux_nodate,
+	title = {Linux {I}/{O} {Performance} {Tests} using dd - {Thomas}-{Krenn}-{Wiki}},
+	url = {https://www.thomas-krenn.com/en/wiki/Linux_I/O_Performance_Tests_using_dd},
+	urldate = {2017-09-13}
+}
+
+@misc{powalowski_hdparm_nodate,
+	title = {hdparm},
+	url = {https://sourceforge.net/projects/hdparm/},
+	urldate = {2017-09-13},
+	author = {Powalowski, Tobias},
+	file = {Snapshot:/home/chowes/Zotero/storage/ZWN7SXJU/hdparm.html:text/html}
+}
+
+@misc{noauthor_benchmarking_nodate,
+	title = {Benchmarking - {ArchWiki}},
+	url = {https://wiki.archlinux.org/index.php/benchmarking},
+	urldate = {2017-09-13},
+	file = {Benchmarking - ArchWiki:/home/chowes/Zotero/storage/TRPBVZV4/benchmarking.html:text/html}
+}
+
+@misc{lunden_amazons_2015,
+	title = {Amazon’s {AWS} {Is} {Now} {A} \$7.3B {Business} {As} {It} {Passes} 1M {Active} {Enterprise} {Customers}},
+	url = {http://social.techcrunch.com/2015/10/07/amazons-aws-is-now-a-7-3b-business-as-it-passes-1m-active-enterprise-customers/},
+	abstract = {Today Amazon's AWS business kicked off its big Re:Invent conference with some stats that speak to how the company's enterprise division continues to dominate..},
+	urldate = {2017-07-24},
+	journal = {TechCrunch},
+	author = {Lunden, Ingrid},
+	year = {2015},
+	file = {Snapshot:/home/chowes/Zotero/storage/C78A42PC/amazons-aws-is-now-a-7-3b-business-as-it-passes-1m-active-enterprise-customers.html:text/html}
+}
+
+@inproceedings{kuhlewind_using_2014,
+	title = {Using data center {TCP} ({DCTCP}) in the {Internet}},
+	booktitle = {Globecom {Workshops} ({GC} {Wkshps}), 2014},
+	publisher = {IEEE},
+	author = {Kühlewind, Mirja and Wagner, David P and Espinosa, Juan Manuel Reyes and Briscoe, Bob},
+	year = {2014},
+	pages = {583--588}
+}
+
+@misc{noauthor_[iccrg]_nodate,
+	title = {[iccrg] {Clearing} up misunderstandings about {Linux} versioning},
+	url = {https://www.ietf.org/mail-archive/web/iccrg/current/msg01071.html},
+	urldate = {2017-07-25}
+}
+
+@misc{mininet_team_mininet:_2014,
+	title = {Mininet: {An} {Instant} {Virtual} {Network} on your {Laptop} (or other {PC}) - {Mininet}},
+	url = {http://mininet.org/},
+	urldate = {2017-07-25},
+	author = {Mininet Team},
+	year = {2014}
+}
+
+@inproceedings{kleinrock_power_1979,
+	address = {Boston, Massachusetts},
+	title = {Power and {Deterministic} {Rules} of {Thumb} for {Probabilistic} {Problems} in {Computer} {Communications}},
+	booktitle = {Conference {Record}, {International} {Conference} on {Communications}},
+	author = {Kleinrock, L.},
+	month = jun,
+	year = {1979},
+	pages = {43.1.1--43.1.10}
+}
+
+@misc{raghaven_cs244_2013,
+	title = {{CS}244 ’13 {DCTCP}},
+	url = {https://reproducingnetworkresearch.wordpress.com/2013/03/13/cs244-13-dctcp/},
+	abstract = {Team: Prachetaa Raghavan, Arjun Gopalan Key results: DCTCP’s low and steady queue occupancy was verified and replicated using mininet. The results are plotted in comparison to TCP. DCTCP’s throughp…},
+	urldate = {2017-07-24},
+	journal = {Reproducing Network Research},
+	author = {Raghaven, Prachetaa and Goplan, Arjun},
+	month = mar,
+	year = {2013},
+	file = {Snapshot:/home/chowes/Zotero/storage/W8NCXQSQ/cs244-13-dctcp.html:text/html}
+}
+
+@article{floyd_synchronization_1994,
+	title = {The synchronization of periodic routing messages},
+	volume = {2},
+	issn = {1063-6692},
+	doi = {10.1109/90.298431},
+	abstract = {The paper considers a network with many apparently-independent periodic processes and discusses one method by which these processes can inadvertently become synchronized. In particular, the authors study the synchronization of periodic routing messages, and offer guidelines on how to avoid inadvertent synchronization. Using simulations and analysis, they study the process of synchronization and show that the transition from unsynchronized to synchronized traffic is not one of gradual degradation but is instead a very abrupt `phase transition': in general, the addition of a single router will convert a completely unsynchronized traffic stream into a completely synchronized one. They show that synchronization can be avoided by the addition of randomization to the traffic sources and quantify how much randomization is necessary. In addition, they argue that the inadvertent synchronization of periodic processes is likely to become an increasing problem in computer networks},
+	number = {2},
+	journal = {IEEE/ACM Transactions on Networking},
+	author = {Floyd, S. and Jacobson, V.},
+	month = apr,
+	year = {1994},
+	keywords = {Aggregates, Analytical models, Computer networks, Degradation, Guidelines, independent periodic processes, Jacobian matrices, Markov processes, performance evaluation, periodic routing messages, protocols, random processes, randomization, router, routing, synchronisation, synchronization, telecommunication network routing, Telecommunication traffic, traffic, Traffic control},
+	pages = {122--136},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/227MNGV5/298431.html:text/html}
+}
+
+@misc{cardwell_tcp_2017,
+	title = {{TCP} {BBR} congestion control comes to {GCP} – your {Internet} just got faster},
+	url = {https://cloudplatform.googleblog.com/2017/07/TCP-BBR-congestion-control-comes-to-GCP-your-Internet-just-got-faster.html},
+	abstract = {By Neal Cardwell, Senior Staff Software Engineer; Yuchung Cheng, Senior Staff Software Engineer; C. Stephen Gunn, Senior Staff Site Reliabil...},
+	urldate = {2017-07-24},
+	journal = {Google Cloud Platform Blog},
+	author = {Cardwell, Neal},
+	year = {2017},
+	file = {Snapshot:/home/chowes/Zotero/storage/VKJXFSIZ/TCP-BBR-congestion-control-comes-to-GCP-your-Internet-just-got-faster.html:text/html}
+}
+
+@article{dean_mapreduce:_2004,
+	title = {{MapReduce}: simplified data processing on large clusters},
+	volume = {51},
+	shorttitle = {{MapReduce}},
+	number = {1},
+	journal = {Com-munications ofthe ACM},
+	author = {Dean, Jeffrey and Ghemawat, Sanjay},
+	year = {2004},
+	pages = {107--l},
+	file = {mapreduce-osdi04.pdf:/home/chowes/Zotero/storage/5A3BGFA7/mapreduce-osdi04.pdf:application/pdf}
+}
+
+@inproceedings{phanishayee_measurement_2008,
+	title = {Measurement and {Analysis} of {TCP} {Throughput} {Collapse} in {Cluster}-based {Storage} {Systems}.},
+	volume = {8},
+	booktitle = {{FAST}},
+	author = {Phanishayee, Amar and Krevat, Elie and Vasudevan, Vijay and Andersen, David G and Ganger, Gregory R and Gibson, Garth A and Seshan, Srinivasan},
+	year = {2008},
+	pages = {1--14}
+}
+
+@inproceedings{hamilton_designing_2007,
+	address = {Austin, TX},
+	title = {On {Designing} and {Deploying} {Internet}-{Scale} {Services}},
+	urldate = {2017-07-23},
+	booktitle = {Proceedings of the 21st {Large} {Installation} {System} {Administration} {Conference}},
+	author = {Hamilton, James},
+	year = {2007},
+	pages = {231--242},
+	file = {On Designing and Deploying Internet-Scale Services:/home/chowes/Zotero/storage/W73ZAPGE/hamilton_html.html:text/html}
+}
+
+@inproceedings{chen_understanding_2009,
+	address = {New York, NY, USA},
+	series = {{WREN} '09},
+	title = {Understanding {TCP} {Incast} {Throughput} {Collapse} in {Datacenter} {Networks}},
+	isbn = {978-1-60558-443-0},
+	url = {http://doi.acm.org/10.1145/1592681.1592693},
+	doi = {10.1145/1592681.1592693},
+	abstract = {TCP Throughput Collapse, also known as Incast, is a pathological behavior of TCP that results in gross under-utilization of link capacity in certain many-to-one communication patterns. This phenomenon has been observed by others in distributed storage, MapReduce and web-search workloads. In this paper we focus on understanding the dynamics of Incast. We use empirical data to reason about the dynamic system of simultaneously communicating TCP entities. We propose an analytical model to account for the observed Incast symptoms, identify contributory factors, and explore the efficacy of solutions proposed by us and by others.},
+	booktitle = {Proceedings of the 1st {ACM} {Workshop} on {Research} on {Enterprise} {Networking}},
+	publisher = {ACM},
+	author = {Chen, Yanpei and Griffith, Rean and Liu, Junda and Katz, Randy H. and Joseph, Anthony D.},
+	year = {2009},
+	keywords = {incast, TCP, throughput collapse, unix},
+	pages = {73--82},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/8VG57IBP/Chen et al. - 2009 - Understanding TCP Incast Throughput Collapse in Da.pdf:application/pdf}
+}
+
+@article{jiao_zhang_modeling_2015,
+	title = {Modeling and {Solving} {TCP} {Incast} {Problem} in {Data} {Center} {Networks}},
+	volume = {26},
+	issn = {1045-9219},
+	url = {http://journals.scholarsportal.info/details/10459219/v26i0002/478_mastipidcn.xml},
+	doi = {10.1109/TPDS.2014.2310210},
+	abstract = {TCP Incast problem attracts much attention due to the catastrophic goodput drop. In this paper, a goodput model of the problem is built to understand why goodput collapse occurs and a solution to the problem based on the theoretical analysis is proposed. We found that the TCP Incast goodput deterioration is mainly caused by two types of timeouts, one happens at the tail of data blocks and dominates the goodput when the number of senders is small, while the other one at the head of data blocks and governs the goodput when the number of senders is large. The proposed model describes the relationship between these two types of timeouts and the Incast communication pattern, block size, bottleneck buffer size, and so on. The simulation results indicate that the model well characterizes the features of the TCP Incast problem. Enlightened by the analysis, a PRiority-based solution to the TCP INcast problem (PRIN) is proposed, which avoids timeouts at the head of blocks by reducing TCP send window and prevents timeouts at the tail of blocks by leveraging priority technology. The experimental results show that PRIN solves the TCP Incast problem.},
+	number = {2},
+	journal = {IEEE Transactions on Parallel and Distributed Systems},
+	author = {{Jiao Zhang} and {Fengyuan Ren} and {Li Tang} and {Chuang Lin}},
+	year = {2015},
+	keywords = {Bandwidth, Computational modeling, computer centres, data center network, Data models, Delays, experiment, goodput, goodput collapse, Incast communication pattern, modeling, packet loss, PRIN, priority-based solution to the TCP Incast problem, Receivers, TCP Incast, transport protocols},
+	pages = {478--491},
+	file = {Scholars Portal Full Text PDF:/home/chowes/Zotero/storage/DPFNI6GE/Jiao Zhang et al. - 2015 - Modeling and Solving TCP Incast Problem in Data Ce.pdf:application/pdf}
+}
+
+@misc{noauthor_analysis_nodate,
+	title = {Analysis of {TCP} performance analysis in data center networks - {Scholars} {Portal} {Books}},
+	url = {http://books2.scholarsportal.info.subzero.lib.uoguelph.ca/viewdoc.html?id=/ebooks/ebooks3/springer/2014-02-13/1/9781461478614},
+	urldate = {2017-07-23},
+	file = {Analysis of TCP performance analysis in data center networks - Scholars Portal Books:/home/chowes/Zotero/storage/5FG5WE6J/viewdoc.html:text/html}
+}
+
+@article{ren_survey_2014,
+	title = {A survey on {TCP} {Incast} in data center networks},
+	volume = {27},
+	issn = {1099-1131},
+	url = {http://onlinelibrary.wiley.com.subzero.lib.uoguelph.ca/doi/10.1002/dac.2402/abstract},
+	doi = {10.1002/dac.2402},
+	abstract = {In high bandwidth, low latency data center networks, when multiple data senders simultaneously communicate with a single receiver, namely in many-to-one communication pattern, the burst data overload the receiver's switch buffers, which leads to Transmission Control Protocol (TCP) throughput collapse. This is the so-called TCP Incast problem. It has become a new hot research topic in recent years. Also, many proposals have been put forward from the aspects of multiple layers including link layer, transport layer, and application layer, etc., to mitigate TCP Incast. In this paper, an in-depth survey on these proposals is given, and the principles, merits, and drawbacks of the main proposals for solving the TCP Incast issue are analyzed and summarized. Copyright © 2012 John Wiley \& Sons, Ltd.},
+	language = {en},
+	number = {8},
+	journal = {International Journal of Communication Systems},
+	author = {Ren, Yongmao and Zhao, Yu and Liu, Pei and Dou, Ke and Li, Jun},
+	month = aug,
+	year = {2014},
+	keywords = {TCP Incast, cloud computing, congestion control, data center networks},
+	pages = {1160--1172},
+	file = {Full Text PDF:/home/chowes/Zotero/storage/RKRUDTMF/Ren et al. - 2014 - A survey on TCP Incast in data center networks.pdf:application/pdf;Snapshot:/home/chowes/Zotero/storage/PF4Z3XIM/abstract.html:text/html}
+}
+
+@misc{noauthor_linux_nodate-1,
+	title = {A {Linux} {TCP} implementation for {NS}2},
+	url = {http://netlab.caltech.edu/projects/ns2tcplinux/ns2linux/},
+	urldate = {2017-07-23},
+	file = {A Linux TCP implementation for NS2:/home/chowes/Zotero/storage/6BWMQS5P/ns2linux.html:text/html}
+}
+
+@article{liu_cache-timing_2013,
+	title = {Cache-timing {Attacks} on {AES}},
+	url = {https://nyuad.nyu.edu/content/dam/nyuad/departments/research/images/center-institutes-grants/moma-lab/moma-project-cache-timing-attacks-on-aes.pdf},
+	urldate = {2017-07-19},
+	journal = {New York University},
+	author = {Liu, Wei and Di Segni, Ariel and Ding, Ye and Zhang, Teng},
+	year = {2013},
+	file = {moma-project-cache-timing-attacks-on-aes.pdf:/home/chowes/Zotero/storage/ZPQ6I2JR/moma-project-cache-timing-attacks-on-aes.pdf:application/pdf}
+}
+
+@incollection{standaert_introduction_2010,
+	series = {Integrated {Circuits} and {Systems}},
+	title = {Introduction to {Side}-{Channel} {Attacks}},
+	isbn = {978-0-387-71827-9 978-0-387-71829-3},
+	url = {https://link.springer.com/chapter/10.1007/978-0-387-71829-3_2},
+	abstract = {Side-channel cryptanalysis is a new research area in applied cryptography that has gained more and more interest since the mid-nineties. It considers adversaries trying to take advantage of the physical specificities of actual cryptographic devices. These implementation-specific attacks frequently turn out to be much more efficient than the best known cryptanalytic attacks against the underlying primitive seen as an idealized object. This chapter aims to introduce such attacks with illustrative examples and to put forward a number of practical concerns related to their implementation and countermeasures.},
+	language = {en},
+	urldate = {2017-07-19},
+	booktitle = {Secure {Integrated} {Circuits} and {Systems}},
+	publisher = {Springer, Boston, MA},
+	author = {Standaert, François-Xavier},
+	year = {2010},
+	note = {DOI: 10.1007/978-0-387-71829-3\_2},
+	pages = {27--42},
+	file = {Snapshot:/home/chowes/Zotero/storage/7HMDG9WK/10.html:text/html}
+}
+
+@article{hodgers_state---art_2016,
+	title = {State-of-the-{Art} in {Physical} {Side}-{Channel} {Attacks} and {Resistant} {Technologies}},
+	url = {http://www.safecrypto.eu/wp-content/uploads/2015/02/SAFEcrypto_D7.1-Approved.pdf},
+	urldate = {2017-07-19},
+	journal = {Secure Architectures of Future Emerging cryptography},
+	author = {Hodgers, Philip and Regazzoni, Francesco and Gilmore, Richard and Moore, Ciara and Oder, Tobias},
+	year = {2016},
+	file = {SAFEcrypto_D7.1-Approved.pdf:/home/chowes/Zotero/storage/UFS9D7KX/SAFEcrypto_D7.1-Approved.pdf:application/pdf}
+}
+
+@article{costan_sanctum:_2015,
+	title = {Sanctum: {Minimal} {RISC} {Extensions} for {Isolated} {Execution}.},
+	volume = {2015},
+	shorttitle = {Sanctum},
+	url = {https://pdfs.semanticscholar.org/7ea7/45e466e988d55981e84dd647adb876b3352e.pdf},
+	urldate = {2017-07-17},
+	journal = {IACR Cryptology ePrint Archive},
+	author = {Costan, Victor and Lebedev, Ilia A. and Devadas, Srinivas},
+	year = {2015},
+	pages = {564},
+	file = {45e466e988d55981e84dd647adb876b3352e.pdf:/home/chowes/Zotero/storage/QIE9382S/45e466e988d55981e84dd647adb876b3352e.pdf:application/pdf}
+}
+
+@inproceedings{costan_sanctum:_2016,
+	address = {Austin, TX},
+	title = {Sanctum: {Minimal} {Hardware} {Extensions} for {String} {Software} {Isolation}},
+	url = {http://portal.acm.org/toc.cfm?id=1072530},
+	language = {English},
+	urldate = {2017-07-17},
+	author = {Costan, Victor and Lebedev, Ilia and Devadas, Srinivas},
+	year = {2016},
+	file = {sec16_paper_costan.pdf:/home/chowes/Zotero/storage/MBU7R2GU/sec16_paper_costan.pdf:application/pdf}
+}
+
+@book{asghari_post-mortem_2015,
+	title = {Post-mortem of a {Zombie}: {Conficker} cleanup after six years},
+	isbn = {978-1-931971-23-2},
+	shorttitle = {Post-mortem of a {Zombie}},
+	abstract = {Research on botnet mitigation has focused predominantly on methods to technically disrupt the commandand-control infrastructure. Much less is known about the effectiveness of large-scale efforts to clean up infected machines. We analyze longitudinal data from the sinkhole of Conficker, one the largest botnets ever seen, to assess the impact of what has been emerging as a best practice: national anti-botnet initiatives that support largescale cleanup of end user machines. It has been six years since the Conficker botnet was sinkholed. The attackers have abandoned it. Still, nearly a million machines remain infected. Conficker provides us with a unique opportunity to estimate cleanup rates, because there are relatively few interfering factors at work. This paper is the first to propose a systematic approach to transform noisy sinkhole data into comparative infection metrics and normalized estimates of cleanup rates. We compare the growth, peak, and decay of Conficker across countries. We find that institutional differences, such as ICT development or unlicensed software use, explain much of the variance, while the national anti-botnet centers have had no visible impact. Cleanup seems even slower than the replacement of machines running Windows XP. In general, the infected users appear outside the reach of current remediation practices. Some ISPs may have judged the neutralized botnet an insufficient threat to merit remediation. These machines can however be magnets for other threats — we find an overlap between GameoverZeus and Conficker infections. We conclude by reflecting on what this means for the future of botnet mitigation.},
+	language = {English},
+	publisher = {USENIX Association},
+	author = {Asghari, H and Ciere, M and Van Eeten, M.J.G},
+	year = {2015},
+	note = {OCLC: 6893255726},
+	file = {sec15-paper-rane.pdf:/home/chowes/Zotero/storage/VZCFZKIT/sec15-paper-rane.pdf:application/pdf}
+}
+
+@inproceedings{aciicmez_power_2007,
+	address = {New York, NY, USA},
+	series = {{ASIACCS} '07},
+	title = {On the {Power} of {Simple} {Branch} {Prediction} {Analysis}},
+	isbn = {978-1-59593-574-8},
+	url = {http://doi.acm.org/10.1145/1229285.1266999},
+	doi = {10.1145/1229285.1266999},
+	abstract = {Very recently, a new software side-channel attack, called Branch Prediction Analysis (BPA) attack, has been discovered and also demonstrated to be practically feasible on popular commodity PC platforms. While the above recent attack still had the flavor of a classical timing attack against RSA, where one uses many execution-time measurements under the same key in order to statistically amplify some small but key-dependent timing differences, we dramatically improve upon the former result. We prove that a carefully written spy-process running simultaneously with an RSA-process, is able to collect during one single RSA signing execution almost all of the secret key bits. We call such an attack, analyzing the CPU's Branch Predictor states through spying on a single quasi-parallel computation process, a Simple Branch Prediction Analysis (SBPA) attack --- sharply differentiating it from those one relying on statistical methods and requiring many computation measurements under the same key. The successful extraction of almost all secret key bits by our SBPA attack against an openSSL RSA implementation proves that the often recommended blinding or so called randomization techniques to protect RSA against side-channel attacks are, in the context of SBPA attacks, totally useless. Additional to that very crucial security implication, targeted at such implementations which are assumed to be at least statistically secure, our successful SBPA attack also bears another equally critical security implication. Namely, in the context of simple side-channel attacks, it is widely believed that equally balancing the operations after branches is a secure countermeasure against such simple attacks. Unfortunately, this is not true, as even such "balanced branch" implementations can be completely broken by our SBPA attacks. Moreover, despite sophisticated hardware-assisted partitioning methods such as memory protection, sandboxing or even virtualization, SBPA attacks empower an unprivileged process to successfully attack other processes running in parallel on the same processor. Thus, we conclude that SBPA attacks are much more dangerous than previously anticipated, as they obviously do not belong to the same category as pure timing attacks.},
+	booktitle = {Proceedings of the 2Nd {ACM} {Symposium} on {Information}, {Computer} and {Communications} {Security}},
+	publisher = {ACM},
+	author = {Aciiçmez, Onur and Koç, Çetin Kaya and Seifert, Jean-Pierre},
+	year = {2007},
+	keywords = {branch prediction analysis, modular exponentiation, RSA, side channel analysis},
+	pages = {312--320},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/9IXGIBFC/Aciiçmez et al. - 2007 - On the Power of Simple Branch Prediction Analysis.pdf:application/pdf}
+}
+
+@article{lee_inferring_2017,
+	title = {Inferring {Fine}-grained {Control} {Flow} {Inside} {SGX} {Enclaves} with {Branch} {Shadowing}},
+	journal = {n Proceedings of the 26th USENIX Security Symposium},
+	author = {Lee, Sangho and Shih, Ming-Wei and Gera, Prasun and Kim, Taesoo and Kim, Hyesoon and Peinado, Marcus},
+	year = {2017},
+	file = {1611.06952.pdf:/home/chowes/Zotero/storage/RS2CQZ6R/1611.06952.pdf:application/pdf}
+}
+
+@misc{intel_corporation_tutorial_2015,
+	title = {Tutorial {Slides} for {Intel} {SGX}},
+	url = {https://software.intel.com/sites/default/files/332680-002.pdf},
+	urldate = {2017-07-15},
+	author = {Intel Corporation},
+	year = {2015},
+	file = {332680-002.pdf:/home/chowes/Zotero/storage/PR9QFRZ8/332680-002.pdf:application/pdf}
+}
+
+@misc{noauthor_passwords:_nodate,
+	title = {Passwords: {Attacks} and {Threats}},
+	shorttitle = {Passwords},
+	url = {http://bugcharmer.blogspot.com/2012/06/passwords-attacks-and-threats.html},
+	abstract = {People throw around a lot of advice about password security, but we don't often talk about what we're trying to accomplish.  The purpose of ...},
+	urldate = {2017-06-25},
+	file = {Snapshot:/home/chowes/Zotero/storage/248B86VI/passwords-attacks-and-threats.html:text/html}
+}
+
+@misc{miessler_seclists_2017,
+	title = {{SecLists}},
+	url = {https://github.com/danielmiessler/SecLists},
+	author = {Miessler, Daniel},
+	month = jun,
+	year = {2017},
+	note = {original-date: 2012-02-19T01:30:18Z},
+	file = {Snapshot:/home/chowes/Zotero/storage/S92WCVS8/10_million_password_list_top_10000.html:text/html}
+}
+
+@article{morris_password_1979,
+	title = {Password {Security}: {A} {Case} {History}},
+	volume = {22},
+	issn = {0001-0782},
+	shorttitle = {Password {Security}},
+	url = {http://doi.acm.org/10.1145/359168.359172},
+	doi = {10.1145/359168.359172},
+	abstract = {This paper describes the history of the design of the password security scheme on a remotely accessed time-sharing system. The present design was the result of countering observed attempts to penetrate the system. The result is a compromise between extreme security and ease of use.},
+	number = {11},
+	journal = {Commun. ACM},
+	author = {Morris, Robert and Thompson, Ken},
+	month = nov,
+	year = {1979},
+	keywords = {computer security, Operating systems, passwords},
+	pages = {594--597},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/3FZMWMVJ/Morris and Thompson - 1979 - Password Security A Case History.pdf:application/pdf}
+}
+
+@misc{noauthor_why_2015,
+	title = {Why it’s harder to forge a {SHA}-1 certificate than it is to find a {SHA}-1 collision},
+	url = {http://blog.cloudflare.com/why-its-harder-to-forge-a-sha-1-certificate-than-it-is-to-find-a-sha-1-collision/},
+	abstract = {It’s well known that SHA-1 is no longer considered a secure cryptographic hash function. Researchers now believe that finding a hash collision (two values that result in the same value when SHA-1 is applied) is inevitable and likely to happen in a matter of months. This poses a potential},
+	urldate = {2017-06-25},
+	journal = {Cloudflare Blog},
+	month = dec,
+	year = {2015},
+	file = {Snapshot:/home/chowes/Zotero/storage/TP354VDX/why-its-harder-to-forge-a-sha-1-certificate-than-it-is-to-find-a-sha-1-collision.html:text/html}
+}
+
+@article{shinde_preventing_2015,
+	title = {Preventing {Your} {Faults} {From} {Telling} {Your} {Secrets}: {Defenses} {Against} {Pigeonhole} {Attacks}},
+	shorttitle = {Preventing {Your} {Faults} {From} {Telling} {Your} {Secrets}},
+	url = {http://arxiv.org/abs/1506.04832},
+	abstract = {New hardware primitives such as Intel SGX secure a user-level process in presence of an untrusted or compromised OS. Such "enclaved execution" systems are vulnerable to several side-channels, one of which is the page fault channel. In this paper, we show that the page fault side-channel has sufficient channel capacity to extract bits of encryption keys from commodity implementations of cryptographic routines in OpenSSL and Libgcrypt --- leaking 27\% on average and up to 100\% of the secret bits in many case-studies. To mitigate this, we propose a software-only defense that masks page fault patterns by determinising the program's memory access behavior. We show that such a technique can be built into a compiler, and implement it for a subset of C which is sufficient to handle the cryptographic routines we study. This defense when implemented generically can have significant overhead of up to 4000X, but with help of developer-assisted compiler optimizations, the overhead reduces to at most 29.22\% in our case studies. Finally, we discuss scope for hardware-assisted defenses, and show one solution that can reduce overheads to 6.77\% with support from hardware changes.},
+	journal = {arXiv:1506.04832 [cs]},
+	author = {Shinde, Shweta and Chua, Zheng Leong and Narayanan, Viswesh and Saxena, Prateek},
+	month = jun,
+	year = {2015},
+	note = {arXiv: 1506.04832},
+	keywords = {Computer Science - Cryptography and Security},
+	file = {arXiv\:1506.04832 PDF:/home/chowes/Zotero/storage/IGQHEVRB/Shinde et al. - 2015 - Preventing Your Faults From Telling Your Secrets .pdf:application/pdf;arXiv.org Snapshot:/home/chowes/Zotero/storage/SUTN786J/1506.html:text/html}
+}
+
+@inproceedings{anati_innovative_2013,
+	title = {Innovative technology for {CPU} based attestation and sealing},
+	volume = {13},
+	url = {https://software.intel.com/en-us/articles/innovative-technology-for-cpu-based-attestation-and-sealing},
+	urldate = {2017-06-14},
+	booktitle = {Proceedings of the 2nd international workshop on hardware and architectural support for security and privacy},
+	author = {Anati, Ittai and Gueron, Shay and Johnson, Simon and Scarlata, Vincent},
+	year = {2013},
+	file = {hasp-2013-innovative-technology-for-attestation-and-sealing.pdf:/home/chowes/Zotero/storage/4KUKQ966/hasp-2013-innovative-technology-for-attestation-and-sealing.pdf:application/pdf}
+}
+
+@misc{intel_corporation_intel_2016,
+	title = {Intel {Software} {Guard} {Extensions}},
+	url = {https://software.intel.com/en-us/sgx},
+	urldate = {2017-06-14},
+	journal = {Intel Software Guard Extensions},
+	author = {Intel Corporation},
+	year = {2016},
+	file = {Intel SGX Homepage | Intel® Software:/home/chowes/Zotero/storage/DGQ8TTAS/sgx.html:text/html}
+}
+
+@article{cardwell_bbr:_2016,
+	title = {{BBR}: {Congestion}-{Based} {Congestion} {Control}},
+	volume = {14},
+	issn = {1542-7730},
+	shorttitle = {{BBR}},
+	url = {http://doi.acm.org/10.1145/3012426.3022184},
+	doi = {10.1145/3012426.3022184},
+	abstract = {Measuring bottleneck bandwidth and round-trip propagation time},
+	number = {5},
+	journal = {Queue},
+	author = {Cardwell, Neal and Cheng, Yuchung and Gunn, C. Stephen and Yeganeh, Soheil Hassas and Jacobson, Van},
+	month = oct,
+	year = {2016},
+	pages = {50:20--50:53},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/9S4K5MFZ/Cardwell et al. - 2016 - BBR Congestion-Based Congestion Control.pdf:application/pdf}
+}
+
+@inproceedings{raiciu_improving_2011,
+	title = {Improving datacenter performance and robustness with multipath {TCP}},
+	volume = {41},
+	url = {http://dl.acm.org/citation.cfm?id=2018467},
+	urldate = {2017-06-13},
+	booktitle = {{ACM} {SIGCOMM} {Computer} {Communication} {Review}},
+	publisher = {ACM},
+	author = {Raiciu, Costin and Barre, Sebastien and Pluntke, Christopher and Greenhalgh, Adam and Wischik, Damon and Handley, Mark},
+	year = {2011},
+	pages = {266--277},
+	file = {mptcp-sigcomm11.pdf:/home/chowes/Zotero/storage/5QZZTBR7/mptcp-sigcomm11.pdf:application/pdf}
+}
+
+@inproceedings{wischik_design_2011,
+	title = {Design, {Implementation} and {Evaluation} of {Congestion} {Control} for {Multipath} {TCP}.},
+	volume = {11},
+	url = {https://www.usenix.org/legacy/event/nsdi11/tech/full_papers/Wischik.pdf},
+	urldate = {2017-06-13},
+	booktitle = {{NSDI}},
+	author = {Wischik, Damon and Raiciu, Costin and Greenhalgh, Adam and Handley, Mark},
+	year = {2011},
+	pages = {8--8},
+	file = {Wischik.pdf:/home/chowes/Zotero/storage/Q7IQZSUC/Wischik.pdf:application/pdf}
+}
+
+@article{wu_ictcp:_2013,
+	title = {{ICTCP}: {Incast} {Congestion} {Control} for {TCP} in {Data}-{Center} {Networks}},
+	volume = {21},
+	issn = {1063-6692},
+	shorttitle = {{ICTCP}},
+	doi = {10.1109/TNET.2012.2197411},
+	abstract = {Transport Control Protocol (TCP) incast congestion happens in high-bandwidth and low-latency networks when multiple synchronized servers send data to the same receiver in parallel. For many important data-center applications such as MapReduce and Search, this many-to-one traffic pattern is common. Hence TCP incast congestion may severely degrade their performances, e.g., by increasing response time. In this paper, we study TCP incast in detail by focusing on the relationships between TCP throughput, round-trip time (RTT), and receive window. Unlike previous approaches, which mitigate the impact of TCP incast congestion by using a fine-grained timeout value, our idea is to design an Incast congestion Control for TCP (ICTCP) scheme on the receiver side. In particular, our method adjusts the TCP receive window proactively before packet loss occurs. The implementation and experiments in our testbed demonstrate that we achieve almost zero timeouts and high goodput for TCP incast.},
+	number = {2},
+	journal = {IEEE/ACM Transactions on Networking},
+	author = {Wu, H. and Feng, Z. and Guo, C. and Zhang, Y.},
+	month = apr,
+	year = {2013},
+	keywords = {Telecommunication traffic, TCP, Bandwidth, computer centres, packet loss, Receivers, transport protocols, Algorithm design and analysis, almost zero timeouts, and Search, data-center networks, de facto reliable transport-layer protocol, Delay, fine-grained timeout value, high goodput, high-bandwidth networks, ICTCP, incast congestion, increase response time, Internet, low-latency networks, many-to-one traffic pattern, MapReduce, multiple synchronized servers, receive window, round-trip time, RTT, Servers, Switches, TCP throughput, telecommunication congestion control, telecommunication network reliability, Throughput, transport control protocol incast congestion control},
+	pages = {345--358},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/IRX7SUQ5/6203387.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/6VGRPZRJ/Wu et al. - 2013 - ICTCP Incast Congestion Control for TCP in Data-C.pdf:application/pdf}
+}
+
+@inproceedings{alizadeh_analysis_2011,
+	title = {Analysis of {DCTCP}: stability, convergence, and fairness},
+	shorttitle = {Analysis of {DCTCP}},
+	url = {http://dl.acm.org/citation.cfm?id=1993753},
+	urldate = {2017-06-10},
+	booktitle = {Proceedings of the {ACM} {SIGMETRICS} joint international conference on {Measurement} and modeling of computer systems},
+	publisher = {ACM},
+	author = {Alizadeh, Mohammad and Javanmard, Adel and Prabhakar, Balaji},
+	year = {2011},
+	pages = {73--84},
+	file = {0d41b1f05cee1d82b213bfacf044983974b1.pdf:/home/chowes/Zotero/storage/PKNTVVPX/0d41b1f05cee1d82b213bfacf044983974b1.pdf:application/pdf}
+}
+
+@inproceedings{carlucci_http_2015,
+	title = {{HTTP} over {UDP}: an experimental investigation of {QUIC}},
+	isbn = {978-1-4503-3196-8},
+	shorttitle = {{HTTP} over {UDP}},
+	url = {http://dl.acm.org/citation.cfm?doid=2695664.2695706},
+	doi = {10.1145/2695664.2695706},
+	language = {en},
+	urldate = {2017-06-09},
+	publisher = {ACM Press},
+	author = {Carlucci, Gaetano and De Cicco, Luca and Mascolo, Saverio},
+	year = {2015},
+	pages = {609--614},
+	file = {p609-carlucci.pdf:/home/chowes/Zotero/storage/NHBUTT6W/p609-carlucci.pdf:application/pdf}
+}
+
+@inproceedings{alizadeh_data_2010,
+	title = {Data center tcp (dctcp)},
+	volume = {40},
+	url = {http://dl.acm.org/citation.cfm?id=1851192},
+	urldate = {2017-06-08},
+	booktitle = {{ACM} {SIGCOMM} computer communication review},
+	publisher = {ACM},
+	author = {Alizadeh, Mohammad and Greenberg, Albert and Maltz, David A. and Padhye, Jitendra and Patel, Parveen and Prabhakar, Balaji and Sengupta, Sudipta and Sridharan, Murari},
+	year = {2010},
+	pages = {63--74},
+	file = {p63-alizadeh.pdf:/home/chowes/Zotero/storage/DA46PEAZ/p63-alizadeh.pdf:application/pdf}
+}
+
+@inproceedings{seo_sgx-shield:_2017,
+	title = {{SGX}-{Shield}: {Enabling} address space layout randomization for {SGX} programs},
+	shorttitle = {{SGX}-{Shield}},
+	url = {http://cps.kaist.ac.kr/papers/ndss17-sgxshield.pdf},
+	urldate = {2017-06-02},
+	booktitle = {Proceedings of the 2017 {Annual} {Network} and {Distributed} {System} {Security} {Symposium} ({NDSS}), {San} {Diego}, {CA}},
+	author = {Seo, Jaebaek and Lee, Byounyoung and Kim, Seongmin and Shih, Ming-Wei and Shin, Insik and Han, Dongsu and Kim, Taesoo},
+	year = {2017},
+	file = {ndss17-sgxshield.pdf:/home/chowes/Zotero/storage/BEDHPJAW/ndss17-sgxshield.pdf:application/pdf}
+}
+
+@inproceedings{handigol_reproducible_2012,
+	address = {New York, NY, USA},
+	series = {{CoNEXT} '12},
+	title = {Reproducible {Network} {Experiments} {Using} {Container}-based {Emulation}},
+	isbn = {978-1-4503-1775-7},
+	url = {http://doi.acm.org/10.1145/2413176.2413206},
+	doi = {10.1145/2413176.2413206},
+	abstract = {In an ideal world, all research papers would be runnable: simply click to replicate all results, using the same setup as the authors. One approach to enable runnable network systems papers is Container-Based Emulation (CBE), where an environment of virtual hosts, switches, and links runs on a modern multicore server, using real application and kernel code with software-emulated network elements. CBE combines many of the best features of software simulators and hardware testbeds, but its performance fidelity is unproven. In this paper, we put CBE to the test, using our prototype, Mininet-HiFi, to reproduce key results from published network experiments such as DCTCP, Hedera, and router buffer sizing. We report lessons learned from a graduate networking class at Stanford, where 37 students used our platform to replicate 18 published results of their own choosing. Our experiences suggest that CBE makes research results easier to reproduce and build upon.},
+	booktitle = {Proceedings of the 8th {International} {Conference} on {Emerging} {Networking} {Experiments} and {Technologies}},
+	publisher = {ACM},
+	author = {Handigol, Nikhil and Heller, Brandon and Jeyakumar, Vimalkumar and Lantz, Bob and McKeown, Nick},
+	year = {2012},
+	keywords = {container-based emulation, reproducible research},
+	pages = {253--264},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/9FD6VCTW/Handigol et al. - 2012 - Reproducible Network Experiments Using Container-b.pdf:application/pdf}
+}
+
+@misc{bonaventure_learning_nodate,
+	title = {Learning {Networking} by {Reproducing} {Research} {Results} – {Computer} {Communication} {Review}},
+	url = {https://ccronline.sigcomm.org/2017/learning-networking-by-reproducing-research-results/},
+	urldate = {2017-06-01},
+	author = {Bonaventure, Olivier},
+	file = {Snapshot:/home/chowes/Zotero/storage/DGTNQIMT/learning-networking-by-reproducing-research-results.html:text/html}
+}
+
+@inproceedings{gotzfried_cache_2017,
+	title = {Cache {Attacks} on {Intel} {SGX}},
+	isbn = {978-1-4503-4935-2},
+	url = {http://dl.acm.org/citation.cfm?doid=3065913.3065915},
+	doi = {10.1145/3065913.3065915},
+	language = {en},
+	urldate = {2017-05-30},
+	publisher = {ACM Press},
+	author = {Götzfried, Johannes and Eckert, Moritz and Schinzel, Sebastian and Müller, Tilo},
+	year = {2017},
+	pages = {1--6},
+	file = {sgx-timing.pdf:/home/chowes/Zotero/storage/HBMW57WK/sgx-timing.pdf:application/pdf}
+}
+
+@article{moghimi_cachezoom:_2017,
+	title = {{CacheZoom}: {How} {SGX} {Amplifies} {The} {Power} of {Cache} {Attacks}},
+	shorttitle = {{CacheZoom}},
+	url = {http://arxiv.org/abs/1703.06986},
+	abstract = {Intel SGX is a hardware extension proposed to provide a Trusted Execution Environment on commodity processors. SGX disregards microarchitectural side-channels as out of scope of its threat model. In this paper, we propose a high-resolution cache side-channel attack and demonstrate its impact and its capability in overcoming the security goals of SGX technology. Our tool tracks virtually all memory accesses of SGX enclaves with high spatial and temporal precision. The resulting attack succeeds on implementations that were previously believed to be resistant to realistic cache attacks. We demonstrate that these new attacks can recover AES keys from an enclave with as few as ten measurements.},
+	journal = {arXiv:1703.06986 [cs]},
+	author = {Moghimi, Ahmad and Irazoqui, Gorka and Eisenbarth, Thomas},
+	month = mar,
+	year = {2017},
+	note = {arXiv: 1703.06986},
+	keywords = {Computer Science - Cryptography and Security},
+	file = {arXiv\:1703.06986 PDF:/home/chowes/Zotero/storage/26ND78KZ/Moghimi et al. - 2017 - CacheZoom How SGX Amplifies The Power of Cache At.pdf:application/pdf;arXiv.org Snapshot:/home/chowes/Zotero/storage/Q9PB2QM6/1703.html:text/html}
+}
+
+@inproceedings{xu_controlled-channel_2015,
+	title = {Controlled-{Channel} {Attacks}: {Deterministic} {Side} {Channels} for {Untrusted} {Operating} {Systems}},
+	shorttitle = {Controlled-{Channel} {Attacks}},
+	doi = {10.1109/SP.2015.45},
+	abstract = {The presence of large numbers of security vulnerabilities in popular feature-rich commodity operating systems has inspired a long line of work on excluding these operating systems from the trusted computing base of applications, while retaining many of their benefits. Legacy applications continue to run on the untrusted operating system, while a small hyper visor or trusted hardware prevents the operating system from accessing the applications' memory. In this paper, we introduce controlled-channel attacks, a new type of side-channel attack that allows an untrusted operating system to extract large amounts of sensitive information from protected applications on systems like Overshadow, Ink Tag or Haven. We implement the attacks on Haven and Ink Tag and demonstrate their power by extracting complete text documents and outlines of JPEG images from widely deployed application libraries. Given these attacks, it is unclear if Over shadow's vision of protecting unmodified legacy applications from legacy operating systems running on off-the-shelf hardware is still tenable.},
+	booktitle = {2015 {IEEE} {Symposium} on {Security} and {Privacy}},
+	author = {Xu, Y. and Cui, W. and Peinado, M.},
+	month = may,
+	year = {2015},
+	keywords = {Operating systems, Control systems, controlled-channel attacks, cryptography, Data mining, deterministic side channels, document handling, feature-rich commodity operating systems, Hardware, Haven, hypervisor, Ink Tag, JPEG images, legacy operating systems, Monitoring, operating systems (computers), Overshadow, Resource management, security vulnerabilities, SGX, side-channel attack, text documents, trusted computing, trusted hardware, untrusted operating system, untrusted operating systems, Virtual machine monitors, virtualization},
+	pages = {640--656},
+	file = {IEEE Xplore Abstract Record:/home/chowes/Zotero/storage/AHXKFX9G/7163052.html:text/html;IEEE Xplore Full Text PDF:/home/chowes/Zotero/storage/SAFPGUHD/Xu et al. - 2015 - Controlled-Channel Attacks Deterministic Side Cha.pdf:application/pdf}
+}
+
+@inproceedings{chen_detecting_2017,
+	address = {New York, NY, USA},
+	series = {{ASIA} {CCS} '17},
+	title = {Detecting {Privileged} {Side}-{Channel} {Attacks} in {Shielded} {Execution} with {DéJà} {Vu}},
+	isbn = {978-1-4503-4944-4},
+	url = {http://doi.acm.org/10.1145/3052973.3053007},
+	doi = {10.1145/3052973.3053007},
+	abstract = {Intel Software Guard Extension (SGX) protects the confidentiality and integrity of an unprivileged program running inside a secure enclave from a privileged attacker who has full control of the entire operating system (OS). Program execution inside this enclave is therefore referred to as shielded. Unfortunately, shielded execution does not protect programs from side-channel attacks by a privileged attacker. For instance, it has been shown that by changing page table entries of memory pages used by shielded execution, a malicious OS kernel could observe memory page accesses from the execution and hence infer a wide range of sensitive information about it. In fact, this page-fault side channel is only an instance of a category of side-channel attacks, here called privileged side-channel attacks, in which privileged attackers frequently preempt the shielded execution to obtain fine-grained side-channel observations. In this paper, we present Deja Vu, a software framework that enables a shielded execution to detect such privileged side-channel attacks. Specifically, we build into shielded execution the ability to check program execution time at the granularity of paths in its control-flow graph. To provide a trustworthy source of time measurement, Deja Vu implements a novel software reference clock that is protected by Intel Transactional Synchronization Extensions (TSX), a hardware implementation of transactional memory. Evaluations show that Deja Vu effectively detects side-channel attacks against shielded execution and against the reference clock itself.},
+	booktitle = {Proceedings of the 2017 {ACM} on {Asia} {Conference} on {Computer} and {Communications} {Security}},
+	publisher = {ACM},
+	author = {Chen, Sanchuan and Zhang, Xiaokuan and Reiter, Michael K. and Zhang, Yinqian},
+	year = {2017},
+	keywords = {side-channel detection, software guard extension, transactional synchronization extensions},
+	pages = {7--18},
+	file = {ACM Full Text PDF:/home/chowes/Zotero/storage/GNK7JRKX/Chen et al. - 2017 - Detecting Privileged Side-Channel Attacks in Shiel.pdf:application/pdf}
+}
+
+@article{schwarz_malware_2017,
+	title = {Malware {Guard} {Extension}: {Using} {SGX} to {Conceal} {Cache} {Attacks}},
+	shorttitle = {Malware {Guard} {Extension}},
+	url = {http://arxiv.org/abs/1702.08719},
+	abstract = {In modern computer systems, user processes are isolated from each other by the operating system and the hardware. Additionally, in a cloud scenario it is crucial that the hypervisor isolates tenants from other tenants that are co-located on the same physical machine. However, the hypervisor does not protect tenants against the cloud provider and thus the supplied operating system and hardware. Intel SGX provides a mechanism that addresses this scenario. It aims at protecting user-level software from attacks from other processes, the operating system, and even physical attackers. In this paper, we demonstrate fine-grained software-based side-channel attacks from a malicious SGX enclave targeting co-located enclaves. Our attack is the first malware running on real SGX hardware, abusing SGX protection features to conceal itself. Furthermore, we demonstrate our attack both in a native environment and across multiple Docker containers. We perform a Prime+Probe cache side-channel attack on a co-located SGX enclave running an up-to-date RSA implementation that uses a constant-time multiplication primitive. The attack works although in SGX enclaves there are no timers, no large pages, no physical addresses, and no shared memory. In a semi-synchronous attack, we extract 96\% of an RSA private key from a single trace. We extract the full RSA private key in an automated attack from 11 traces within 5 minutes.},
+	journal = {arXiv:1702.08719 [cs]},
+	author = {Schwarz, Michael and Weiser, Samuel and Gruss, Daniel and Maurice, Clémentine and Mangard, Stefan},
+	month = feb,
+	year = {2017},
+	note = {arXiv: 1702.08719},
+	keywords = {Computer Science - Cryptography and Security},
+	file = {arXiv\:1702.08719 PDF:/home/chowes/Zotero/storage/Q6Q54JQZ/Schwarz et al. - 2017 - Malware Guard Extension Using SGX to Conceal Cach.pdf:application/pdf;arXiv.org Snapshot:/home/chowes/Zotero/storage/UH7IJT3K/1702.html:text/html}
+}
+
+@inproceedings{shih_t-sgx:_2017,
+	title = {T-{SGX}: {Eradicating} {Controlled}-{Channel} {Attacks} {Against} {Enclave} {Programs}},
+	isbn = {978-1-891562-46-4},
+	shorttitle = {T-{SGX}},
+	url = {https://www.internetsociety.org/sites/default/files/ndss2017_07-2_Shih_paper.pdf},
+	doi = {10.14722/ndss.2017.23193},
+	language = {en},
+	urldate = {2017-05-30},
+	publisher = {Internet Society},
+	author = {Shih, Ming-Wei and Lee, Sangho and Kim, Taesoo and Peinado, Marcus},
+	year = {2017},
+	file = {fba7aad263c7d4cf5ce67b1d629935043e7a.pdf:/home/chowes/Zotero/storage/FXRCM9M8/fba7aad263c7d4cf5ce67b1d629935043e7a.pdf:application/pdf}
+}
+
+@article{costan_intel_2016,
+	title = {Intel {SGX} {Explained}.},
+	volume = {2016},
+	url = {https://pdfs.semanticscholar.org/2d7f/3f4ca3fbb15ae04533456e5031e0d0dc845a.pdf},
+	urldate = {2017-05-30},
+	journal = {IACR Cryptology ePrint Archive},
+	author = {Costan, Victor and Devadas, Srinivas},
+	year = {2016},
+	pages = {86},
+	file = {3f4ca3fbb15ae04533456e5031e0d0dc845a.pdf:/home/chowes/Zotero/storage/X8UG4GEP/3f4ca3fbb15ae04533456e5031e0d0dc845a.pdf:application/pdf}
+}

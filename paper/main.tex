@@ -1,0 +1,88 @@
+% TEMPLATE for Usenix papers, specifically to meet requirements of
+%  USENIX '05
+% originally a template for producing IEEE-format articles using LaTeX.
+%   written by Matthew Ward, CS Department, Worcester Polytechnic Institute.
+% adapted by David Beazley for his excellent SWIG paper in Proceedings,
+%   Tcl 96
+% turned into a smartass generic template by De Clarke, with thanks to
+%   both the above pioneers
+% use at your own risk.  Complaints to /dev/null.
+% make it two column with no page numbering, default is 10 point
+
+% Munged by Fred Douglis <douglis@research.att.com> 10/97 to separate
+% the .sty file from the LaTeX source template, so that people can
+% more easily include the .sty file into an existing document.  Also
+% changed to more closely follow the style guidelines as represented
+% by the Word sample file. 
+
+% Note that since 2010, USENIX does not require endnotes. If you want
+% foot of page notes, don't include the endnotes package in the 
+% usepackage command, below.
+
+
+% This version uses the latex2e styles, not the very ancient 2.09 stuff.
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix,epsfig,endnotes,url, graphicx}
+\graphicspath{{images/ceph/}}
+\begin{document}
+
+%don't want date printed
+\date{}
+
+%make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Traffic Sign Classification}
+
+\author{
+	%for single author (just remove % characters)
+	{\rm Colin Howes}\\
+	University of Waterloo
+} % end author
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+\subsection*{Abstract}
+
+Efficient and accurate classification of traffic signs is necessary for the development of autonomous vehicles and driver assistance systems, and constitutes an interesting computer vision problem with a high degree of real-world relevance. As such, traffic sign classification has enjoyed significant recent attention from the research community, and current techniques are able to meet or surpass human performane in publicly available datasets. Here, I compare successful approaches to traffic sign classification and present the performance of a traffic sign classifier based on a convolutional neural network.
+
+
+\section{Introduction}
+
+Traffic sign classification is a computer vision problem with a great deal of relevance to current advancements in autonomous vehicles and driver assistance systems. A viable traffic sign classifier must not only detect and categorize signs with a high degree of accuracy, it must perform efficiently, tolerate potentially noisy environments, and perform correctly in the presence of defects or variations in sign appearance. Many techniques have been applied to address the traffic sign classification problem, here we focus on three techniques that exhibited near-human performance on a competitive benchmark: multi-column deep neural networks, convolutional neural networks, and linear discriminant analysis (LDA) on histogram oriented gradients (HOG) features \cite{stallkamp_german_2011, stallkamp_man_2012, ciresan_committee_2011, sermanet_traffic_2011, ciresan_multi-column_2012}.
+
+
+\section{Comparison of Techniques}
+
+\subsection{Benchmark}
+
+The techniques discussed here were selected from high performing approaches entered into the German Traffic Sign Recognition Benchmark competition \cite{stallkamp_german_2011, stallkamp_man_2012}. This competition provides a high quality dataset of traffic sign images split into training and test sets that can be used to design, validate, and compare approaches to traffic sign classification. The dataset consists of TODO training images and TODO test images comprised of 43 classes. The dataset is unbalanced, with class representation ranging from 0.5 \% and 5.5 \% of images.
+
+\subsection{Linear Discriminant Analysis}
+
+\subsection{Convolutional Neural Networks}
+
+\subsection{Multi-Column Deep Neural Networks}
+
+
+\section{Methodology}
+
+In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a traffic sign classifier based on a 4-layer convolutional neural network and trained it on the German traffic sign detection benchmark dataset. 
+
+
+\section{Results}
+
+
+\section{Conclusions}
+
+
+\section{Summary}
+
+I presented an analysis and comparison of a set of traffic sign recognition techniques that performed well on a competition dataset. In addition, I presented a simple implementation of a traffic sign classifier using a convolutional neural network and compared the effectiveness of this implementation with the performance of past techniques.
+
+
+{\footnotesize \bibliographystyle{acm}
+\bibliography{refs.bib}}
+
+\end{document}

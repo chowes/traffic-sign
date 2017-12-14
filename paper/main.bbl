@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{ciresan_committee_2011}
+{\sc Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J.}
+\newblock A committee of neural networks for traffic sign classification.
+\newblock In {\em The 2011 {International} {Joint} {Conference} on {Neural}
+  {Networks}\/} (July 2011), pp.~1918--1921.
+
+\bibitem{ciresan_multi-column_2012}
+{\sc Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J.}
+\newblock Multi-column deep neural network for traffic sign classification.
+\newblock {\em Neural Networks 32}, Supplement C (Aug. 2012), 333--338.
+
+\bibitem{sermanet_traffic_2011}
+{\sc Sermanet, P., and LeCun, Y.}
+\newblock Traffic sign recognition with multi-scale {Convolutional} {Networks}.
+\newblock In {\em The 2011 {International} {Joint} {Conference} on {Neural}
+  {Networks}\/} (July 2011), pp.~2809--2813.
+
+\bibitem{stallkamp_german_2011}
+{\sc Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C.}
+\newblock The {German} {Traffic} {Sign} {Recognition} {Benchmark}: {A}
+  multi-class classification competition.
+\newblock In {\em The 2011 {International} {Joint} {Conference} on {Neural}
+  {Networks}\/} (July 2011), pp.~1453--1460.
+
+\bibitem{stallkamp_man_2012}
+{\sc Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C.}
+\newblock Man vs. computer: {Benchmarking} machine learning algorithms for
+  traffic sign recognition.
+\newblock {\em Neural Networks 32}, Supplement C (Aug. 2012), 323--332.
+
+\end{thebibliography}
