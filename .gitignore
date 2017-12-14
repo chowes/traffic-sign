@@ -112,6 +112,8 @@ ENV/
 *.fot
 *.cb
 *.cb2
+*.bbl
+*.blg
 
 # Image sets
 images/*
