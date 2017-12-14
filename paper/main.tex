@@ -23,7 +23,7 @@
 % This version uses the latex2e styles, not the very ancient 2.09 stuff.
 \documentclass[letterpaper,twocolumn,10pt]{article}
 \usepackage{usenix,epsfig,endnotes,url, graphicx}
-\graphicspath{{images/ceph/}}
+\graphicspath{{figures/}}
 \begin{document}
 
 %don't want date printed
@@ -45,7 +45,7 @@
 
 \subsection*{Abstract}
 
-Efficient and accurate classification of traffic signs is necessary for the development of autonomous vehicles and driver assistance systems, and constitutes an interesting computer vision problem with a high degree of real-world relevance. As such, traffic sign classification has enjoyed significant recent attention from the research community, and current techniques are able to meet or surpass human performane in publicly available datasets. Here, I compare successful approaches to traffic sign classification and present the performance of a traffic sign classifier based on a convolutional neural network.
+Efficient and accurate classification of traffic signs is necessary for the development of autonomous vehicles and driver assistance systems, and constitutes an interesting computer vision problem with a high degree of real-world relevance. As such, traffic sign classification has enjoyed significant recent attention from the research community, and current techniques are able to meet or surpass human performance in publicly available data sets. Here, I compare successful approaches to traffic sign classification and present the performance of a traffic sign classifier based on a convolutional neural network.
 
 
 \section{Introduction}
@@ -57,18 +57,35 @@ Traffic sign classification is a computer vision problem with a great deal of re
 
 \subsection{Benchmark}
 
-The techniques discussed here were selected from high performing approaches entered into the German Traffic Sign Recognition Benchmark competition \cite{stallkamp_german_2011, stallkamp_man_2012}. This competition provides a high quality dataset of traffic sign images split into training and test sets that can be used to design, validate, and compare approaches to traffic sign classification. The dataset consists of TODO training images and TODO test images comprised of 43 classes. The dataset is unbalanced, with class representation ranging from 0.5 \% and 5.5 \% of images.
+The techniques discussed here were selected from high performing approaches entered into the German Traffic Sign Recognition Benchmark competition \cite{stallkamp_german_2011, stallkamp_man_2012}. This competition provides a high quality data set of traffic sign images split into training and test sets that can be used to design, validate, and compare approaches to traffic sign classification. The data set consists of TODO training images and TODO test images comprised of 43 classes. The data set is unbalanced, with class representation ranging from 0.5 \% and 5.5 \% of images.
+
+% TODO: Discuss competition, etc.
 
 \subsection{Linear Discriminant Analysis}
 
+Linear discriminant analysis (LDA) ...
+% TODO: What is LDA, how does it work, etc.
+
+% TODO: How is LDA applied to traffic sign classification, how does it perform, etc. 
+
 \subsection{Convolutional Neural Networks}
 
+Convolutional neural networks (CNNs) ...
+% What are CNNs, how do they work, etc.
+
+% How are CNNs applied to traffic sign classification, examine different implementations, etc.
+
 \subsection{Multi-Column Deep Neural Networks}
+
+Multi-column deep neural networks (MCDNNs) ...
+% What are MCDNNs, how do they work, etc. Note that they can involve the use of CNNs so there is some overlap
+
+% How are they applied to traffic sign classification, performance, implementation, etc.
 
 
 \section{Methodology}
 
-In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a traffic sign classifier based on a 4-layer convolutional neural network and trained it on the German traffic sign detection benchmark dataset. 
+In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a traffic sign classifier based on a 4-layer convolutional neural network and trained it on the German traffic sign detection benchmark data set. 
 
 
 \section{Results}
@@ -79,7 +96,7 @@ In order to validate previous results demonstrating the effectiveness of convolu
 
 \section{Summary}
 
-I presented an analysis and comparison of a set of traffic sign recognition techniques that performed well on a competition dataset. In addition, I presented a simple implementation of a traffic sign classifier using a convolutional neural network and compared the effectiveness of this implementation with the performance of past techniques.
+I presented an analysis and comparison of a set of traffic sign recognition techniques that performed well on a competition data set. In addition, I presented a simple implementation of a traffic sign classifier using a convolutional neural network and compared the effectiveness of this implementation with the performance of past techniques.
 
 
 {\footnotesize \bibliographystyle{acm}

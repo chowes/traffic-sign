@@ -114,6 +114,7 @@ ENV/
 *.cb2
 *.bbl
 *.blg
+*.bak
 
 # Image sets
 images/*
