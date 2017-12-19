@@ -13,7 +13,7 @@ K.set_image_data_format('channels_first')
 class CNNModel:
     model = None
 
-    def __init__(self, image_sz=48, num_classes=43, learning_rate=.001, batch_size=32, epochs=200):
+    def __init__(self, image_sz=48, num_classes=43, learning_rate=.001, batch_size=32, epochs=400):
         """
         Initialize our model - this configuration seems to be pretty "standard", as far as I can tell.
         I tried to fiddle with the convolutional layer parameters but it just breaks (and I have no idea why).
