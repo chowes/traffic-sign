@@ -1,12 +1,14 @@
 import os
 import glob
 import h5py
+import random
 import numpy as np
 import pandas as pd
+from scipy import ndimage
 from skimage import io, color, exposure, transform
 
 
-def import_training_set(image_dir='../images/Final_Training/Images/'):
+def import_training_set(image_dir='../images/Final_Training/Images/', augment_p=0.0):
     """
     Read images from GTSRB file, uses kind of a hacky fix to get class names. The idea comes from:
     https://chsasank.github.io/keras-tutorial.html
@@ -24,6 +26,11 @@ def import_training_set(image_dir='../images/Final_Training/Images/'):
     for image_path in all_paths:
         image = preprocess_image(io.imread(image_path))
         label = int(image_path.split('/')[-2])
+        # we want to blur images with probability p
+        if random.uniform(0, 1) < augment_p:
+            augmented_image = ndimage.gaussian_filter(image, sigma=3)
+            images.append(augmented_image)
+            labels.append(label)
         images.append(image)
         labels.append(label)
 

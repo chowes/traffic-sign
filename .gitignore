@@ -119,4 +119,6 @@ ENV/
 # Image sets
 images/*
 
+# Models
+*.h5
 

@@ -24,6 +24,10 @@
 {\sc Intel}.
 \newblock Autonomous driving is powered by intel.
 
+\bibitem{lasagne_loss}
+{\sc Lasagne}.
+\newblock lasagne.objectives - documentation.
+
 \bibitem{fpga2}
 {\sc Liu, S., Tang, J., Zhang, Z., and Gaudiot, J.-L.}
 \newblock Caad: Computer architecture for autonomous driving.

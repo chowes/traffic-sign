@@ -120,20 +120,35 @@ My approach was similar to the approaches outlined in \cite{sermanet_convolution
 
 The model is made up of three pairs of feed-forward convolutional layers seperated by $2 \times 2$ max-pooling layers. Each of these pooling layers feeds into a dropout layer which drops $1/4^{th}$ of its inputs. The final set of convolutional, pooling, and dropout layers are flattened and passed into a classifier layer, which feeds into a softmax output layer that returns a probability distribution over the classes for a given input. The prediction for a given input is simply the maximum over this probability distribution.
 
+\subsection{Training}
+
+I trained the models over 200 epochs using the default batch size of 32 and a learning rate of 0.001. I used categorical cross-entropy as the loss function and stochastic gradient descent as the optimizer, which is suggested for multi-label classification problems \cite{lasagne_loss}.
+
 \section{Results}
 
-When training with only unaltered images provided in the GTSRB data set, my model had an accuracy of 95.42 \% on the test set. This is reasonably high considering the simplicity of the model and lack of data set augmentation, though accuracy is considerably lower than both human performance (98.84 \%) and the performance of other classifiers implemented using CNNs (98.31 \%) \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. Figure 1 and Figure 2 show the accuracy and loss of the network over 200 training epochs when trained only on unaugmented images provided in the GTSRB data set. 
+When training with only unaltered images provided in the GTSRB data set, my model had an accuracy of 95.42 \% on the test set. This is reasonably high considering the simplicity of the model and lack of data set augmentation, though accuracy is considerably lower than both human performance (98.84 \%) and the performance of other classifiers implemented using CNNs (98.31 \%) \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. Figure 1 and Figure 2 show the accuracy and loss of the network over 200 training epochs when trained only on unaugmented images provided in the GTSRB data set.
 
 \begin{figure}
 \includegraphics[width=3.25in]{accuracy}
-\caption{Accuracy over 200 epochs. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\caption{Accuracy over 200 epochs on the base image set. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=3.25in]{loss}
-\caption{Loss over 200 epochs. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\caption{Loss over 200 epochs on the base image set. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
 \end{figure}
 
+In order to assess the benefit of augmenting the data set with simple transformations of training images, I trained the model again on the same architecture, randomly applying a gaussian blur to half of the training examples. I observed a marginal improvement over the unaugmented data set, with the new model correctly classifying 96.00 \% of test images. Due to time limitations, it was not possible to experiment with other transformations, though I suspect that applying a random mix of transformations to generate the augmented data set would produce better results, since this technique has been used with considerable success in the past \cite{ciresan_committee_2011}. Figure 3 and Figure 4 show the accuracy and loss of the network over 200 training epochs when trained the augmented data set.
+
+\begin{figure}
+\includegraphics[width=3.25in]{accuracy}
+\caption{Accuracy over 200 epochs using data augmentation. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=3.25in]{loss}
+\caption{Loss over 200 epochs using data augmentation. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\end{figure}
 
 
 \section{Conclusions}

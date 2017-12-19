@@ -13,7 +13,7 @@ def main():
 
     print("Read training and test data...\n")
     
-    train_x, train_y = import_training_set('../images/Final_Training/Images/')
+    train_x, train_y = import_training_set('../images/Final_Training/Images/', 0.5)
 
     print("Training images: " + str(train_y.shape[0]))
     print("Classes: " + str(np.unique(train_y).shape[0]) + "\n")
