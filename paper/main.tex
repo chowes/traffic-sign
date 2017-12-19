@@ -89,14 +89,17 @@ One of the major advantages of CNN-based approaches is that images require littl
 
 Traffic sign classifiers based on CNNs perform well on the GTSRB data set, with the highest performing implementations reaching or exceeding human performance with the highest performing implementations  classifying between 98.31 \% and 99.17 \% of examples correctly. Unfortunately, the accuracy of CNNs comes at the cost of high training times, with training on the GTSRB data set taking on the order of hours and requiring access to powerful hardware \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. 
 
-CNNs are capable of providing highly accurate classification at the cost of a relatively large initial time investment needed to train the model. Additionally, high performance CNNs often rely on costly hardware, making CNN implementations infeasible on low cost or lightweight embedded hardware.
+CNNs are capable of providing highly accurate classification at the cost of a relatively large initial time investment needed to train the model. Additionally, high performance CNNs often rely on expensive hardware, making CNN implementations infeasible on low cost or lightweight embedded hardware.
 
 \subsection{Committees}
 
-Multi-column deep neural networks (MCDNNs) ...
-% What are MCDNNs, how do they work, etc. Note that they can involve the use of CNNs so there is some overlap
+The accuracy of classification algorithms can be improved considerably through the use of \emph{committees}, which are sets of classifiers that generate results that can then be combined to reduce error due to misclassifications in individual classifiers. The highest performing classifiers entered into the GTSRB competition were comprised of committees based on convolutional neural networks \cite{ciresan_committee_2011, ciresan_multi-column_2012, stallkamp_german_2011, stallkamp_man_2012}. The original design proposed at the initial stage of the competition was built using a combination of CNNs and multi-layer perceptrons. This approached not only outperformed both MLPs and CNNs alone, but was the only classifier to outperform human participants. The authors refined the design to use only committees of CNNs, with the most advanced implementation reaching 99.46 \% accuracy on the GTSRB data set \cite{ciresan_committee_2011, ciresan_multi-column_2012}.
 
-% How are they applied to traffic sign classification, performance, implementation, etc.
+This \emph{multi-column deep neural network} (MCDNN) is fairly simple in its design, consisting of 25 CNNs arranged in ``columns'', where each column is an 9-layer CNN. Each column generates a prediction for a given example, and these predictions are averaged across all columns to produce a combined result \cite{ciresan_multi-column_2012}. Although these findings indicate that MCDNNs are highly accurate, training a large grouping of deep CNNs takes an exceptional amount of computing power, requiring 37 hours to train on 4 high-end GPUs, making this approach impractical for real-world applications even on advanced hardware \cite{ciresan_multi-column_2012}.
+
+Committees have also been used to improve the performance of support vector machines by cascading SVM classifiers trained on HOG features. This technique has been shown to be fast enough to classify a constant steam of images at 20 frames/second at a 200 ms latency. However, although forming committees provides an improvement over poor-performing SVMs, this technique achieved only 89.2 \% accuracy on the GTSRB data set \cite{greenhalgh_real-time_2012}.
+
+In general, committees are effective at improving performance above that of individual classifiers. However, in the case of highly accurate MCDNN implementations, this comes at a major computational cost, making the technique impractical for most real-world applications. Additionally, given the promising performance of committees of SVMs, using committees of lightweight classifiers for real-time classification may be in interesting avenue for future research.
 
 \subsection{Discussion}
 
@@ -108,14 +111,11 @@ As hardware continues to become more powerful, computationally expensive classif
 
 Finally, the emergence of ``standard'' benchmarks for traffic sign classification is something that bears consideration. The motivating idea behind benchmarks is that they give researchers and developers a way to assess how well a system performs. The consequence of this is that systems end up being tailored towards high performance on a benchmark rather than on the task they are designed to perform. In the context of machine learning, this could lead to overfitting, such that classifiers perform well on benchmarks but not on real-world examples.
 
-One solution to this is to adopt many different benchmarks, and use classifiers that perform well on all of them. This is solution suits the traffic sign classification problem well, given that different regions have adopted different sets of traffic signs and classifiers need to be trained on data from every region where it is expected to be used. Indeed, a number of public data sets have been released since the GTSRB data set was made public, including the LISA (United States) and BelgiumTS (Belgium) data sets \cite{mathias_traffic_2013, mogelmose_vision-based_2012}. By benchmarking traffic sign classifiers on a diverse set of benchmarks will prevent overfitting and improve generalizability. 
-
-
-
+One solution to this issue is to adopt many different benchmarks, and use classifiers that perform well on all of them. This is solution suits the traffic sign classification problem well, given that different regions have adopted different sets of traffic signs and classifiers need to be trained on data from every region where it is expected to be used. Indeed, a number of public data sets have been released since the GTSRB data set was made public, including the LISA (United States) and BelgiumTS (Belgium) data sets \cite{mathias_traffic_2013, mogelmose_vision-based_2012}. By benchmarking traffic sign classifiers on a diverse set of benchmarks will prevent overfitting and improve generalizability. 
 
 \section{Methodology}
 
-In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a simple traffic sign classifier based on a convolutional neural network and evaluated it using the German Traffic Sign Detection Benchmark data set \cite{stallkamp_german_2011, stallkamp_man_2012}. 
+In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a simple traffic sign classifier based on a convolutional neural network and evaluated it using the German Traffic Sign Detection Benchmark data set \cite{stallkamp_german_2011, stallkamp_man_2012}. All training and evaluation was done on a desktop computer running Ubuntu Linux 17.10 with a quad-core Intel Core i5-4690K processor, 16 GiB DDR3 memory, and a 4 GiB Nvidia GTX 970 graphics card. All implementation was done in Python 3.6.3 using Keras on top of TensorFlow.
 
 \subsection{Architecture}
 
@@ -125,11 +125,11 @@ The model is made up of three pairs of feed-forward convolutional layers separat
 
 \subsection{Training}
 
-I trained the models over 200 epochs using the default batch size of 32 and a learning rate of 0.001. I used categorical cross-entropy as the loss function and stochastic gradient descent as the optimizer, which is suggested for multi-label classification problems \cite{lasagne_loss}.
+I trained the models over 200 epochs using the default batch size of 32 and a learning rate of 0.001. I used categorical cross-entropy as the loss function and stochastic gradient descent as the optimizer, which is suggested for multi-label classification problems \cite{lasagne_loss}. Training the model on the GTSRB data set using the hardware described above took a total of 52 minutes and 44 seconds.
 
 \section{Results}
 
-When training with only unaltered images provided in the GTSRB data set, my model had an accuracy of 95.42 \% on the test set. This is reasonably high considering the simplicity of the model and lack of data set augmentation, though accuracy is considerably lower than both human performance (98.84 \%) and the performance of other classifiers implemented using CNNs (98.31 \%) \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. Figure 1 and Figure 2 show the accuracy and loss of the network over 200 training epochs when trained only on unaugmented images provided in the GTSRB data set.
+When training with only unaltered images provided in the GTSRB data set, my model had an accuracy of 95.77 \% on the test set, requiring a total of 1.98 seconds to classify all 34799 test examples, indicating that with powerful enough hardware the model could easily keep up with the framerate of any conventional camera (usually 24 frames/second). The accuracy of the model is reasonably high considering its simplicity and the lack of data set augmentation, though the accuracy is considerably lower than both human performance (98.84 \%) and the performance of other classifiers implemented using CNNs (98.31 \% - 99.17 \%) \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. Figure 1 and Figure 2 show the accuracy and loss of the network over 200 training epochs when trained only on unaugmented images provided in the GTSRB data set.
 
 \begin{figure}
 \includegraphics[width=3.25in]{accuracy}
@@ -141,7 +141,9 @@ When training with only unaltered images provided in the GTSRB data set, my mode
 \caption{Loss over 200 epochs on the base image set. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
 \end{figure}
 
-In order to assess the benefit of augmenting the data set with simple transformations of training images, I trained the model again on the same architecture, randomly applying a Gaussian blur to half of the training examples. I observed a marginal improvement over the unaugmented data set, with the new model correctly classifying 96.00 \% of test images. Due to time limitations, it was not possible to experiment with other transformations, though I suspect that applying a random mix of transformations to generate the augmented data set would produce better results, since this technique has been used with considerable success in the past \cite{ciresan_committee_2011}. Figure 3 and Figure 4 show the accuracy and loss of the network over 200 training epochs when trained the augmented data set.
+In order to assess the benefit of augmenting the data set with simple transformations of training images, I trained the model again on the same architecture, randomly applying a Gaussian blur to $1/5^{th}$ of the training examples. I observed no improvement over the unaugmented data set, with the new model correctly classifying 95.38 \% of test images. Due to time limitations, it was not possible to experiment with other transformations, though I suspect that applying a random mix of transformations to generate the augmented data set would produce better results, since this technique has been used with considerable success in the past \cite{ciresan_committee_2011, sermanet_convolutional_2012}. Figure 3 and Figure 4 show the accuracy and loss of the network over 200 training epochs when trained the augmented data set.
+
+Finally, I evaluated the effect of pairing convolutional layers before performing pooling to improve classification performance. The design of my architecture is based in part on a model similar to that used in \cite{sermanet_convolutional_2012}, though with the addition of paired convolutional layers prior to each pooling layer in place of a fully connected classifier \cite{keras_traffic}. I assessed the performance of my network without these additional layers and found that training time was reduced by roughly 40 \%, though the model was only able to correctly classify 91.19 \% of examples following training, suggesting that these additional layers are necessary in the absence of a fully connected network in which all layers feed into the classifier \cite{sermanet_convolutional_2012}.
 
 \begin{figure}
 \includegraphics[width=3.25in]{accuracy}
@@ -156,11 +158,15 @@ In order to assess the benefit of augmenting the data set with simple transforma
 
 \section{Conclusions}
 
+The results discussed above demonstrate that even a simple convolutional neural network can obtain reasonable accuracy when trained with a high quality data set. Although I failed to demonstrate any benefit of data augmentation, the success of this technique in past work indicates that this is a failure in my relatively simplistic methodology rather than an issue with the technique itself \cite{ciresan_committee_2011, sermanet_convolutional_2012}. If I were to repeat this experiment again, I would add a more comprehensive set of transformations in computing the augmented data set. 
 
-\section{Summary}
+\section{Summary and Future Directions}
 
-I presented an analysis and comparison of a set of traffic sign recognition techniques that performed well on a competition data set. In addition, I presented a simple implementation of a traffic sign classifier using a convolutional neural network and compared the effectiveness of this implementation with the performance of past techniques.
+I presented an analysis and comparison of a set of traffic sign recognition techniques that performed well on a competition data set. In addition, I presented a simple implementation of a traffic sign classifier using a convolutional neural network and compared the effectiveness of this implementation with the performance of past techniques, though I failed to find any benefit in applying Gaussian blur to a random subset of training data in order to augment my data set.
 
+Given the high accuracy of traffic sign classification techniques based on convolutional neural networks, future work should continue to improve the efficiency of these classifiers. Future benchmarks may wish to take efficiency into account when considering the evaluation of techniques, perhaps through a requirement that some throughput must be maintained.
+
+Additionally, given the effectiveness of committees in improving accuracy beyond that of individual classifiers, future work should consider the use of committees of lightweight classifiers, such as implementations based on linear discriminant analysis, which provides relatively high accuracy given its low computational demands.
 
 {\footnotesize \bibliographystyle{acm}
 \bibliography{refs.bib}}

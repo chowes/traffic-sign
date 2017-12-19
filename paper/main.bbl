@@ -15,6 +15,13 @@
 \newblock Multi-column deep neural network for traffic sign classification.
 \newblock {\em Neural Networks 32}, Supplement C (Aug. 2012), 333--338.
 
+\bibitem{greenhalgh_real-time_2012}
+{\sc Greenhalgh, J., and Mirmehdi, M.}
+\newblock Real-{Time} {Detection} and {Recognition} of {Road} {Traffic}
+  {Signs}.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems 13}, 4
+  (Dec. 2012), 1498--1506.
+
 \bibitem{hastie2001linear}
 {\sc Hastie, T., Friedman, J., and Tibshirani, R.}
 \newblock Linear methods for classification.
