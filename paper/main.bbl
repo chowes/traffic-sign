@@ -15,6 +15,12 @@
 \newblock Multi-column deep neural network for traffic sign classification.
 \newblock {\em Neural Networks 32}, Supplement C (Aug. 2012), 333--338.
 
+\bibitem{hastie2001linear}
+{\sc Hastie, T., Friedman, J., and Tibshirani, R.}
+\newblock Linear methods for classification.
+\newblock In {\em The Elements of Statistical Learning}. Springer, 2001,
+  pp.~79--113.
+
 \bibitem{lane-detection}
 {\sc Hillel, A.~B., Lerner, R., Levi, D., and Raz, G.}
 \newblock Recent progress in road and lane detection: a survey.
@@ -75,5 +81,10 @@
 \bibitem{tensorflow_traffic}
 {\sc Staravoitau, A.}
 \newblock Traffic signs classification with a convolutional network.
+
+\bibitem{xanthopoulos2013linear}
+{\sc Xanthopoulos, P., Pardalos, P.~M., and Trafalis, T.~B.}
+\newblock Linear discriminant analysis.
+\newblock In {\em Robust Data Mining}. Springer, 2013, pp.~27--33.
 
 \end{thebibliography}
