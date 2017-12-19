@@ -1,33 +1,39 @@
 #!/usr/bin/python3
 
 import sys
+import os
 import numpy as np
+from image_processing import import_training_set, import_test_set, preprocess_image
 
-from image_processing import read_data, convert_to_greyscale
-from log import show_time_elapsed, show_progress
+from perf_plots import plot_loss, plot_accuracy
+from model import CNNModel
+
 
 def main():
 
     print("Read training and test data...\n")
     
-    train_x, train_y = read_data("../images/train.p", ['features', 'labels'])
-    test_x, test_y = read_data("../images/test.p", ['features', 'labels'])
+    train_x, train_y = import_training_set('../images/Final_Training/Images/')
 
     print("Training images: " + str(train_y.shape[0]))
-    print("Test images: " + str(test_y.shape[0]))
-    print("Classes: " + str(np.unique(test_y).shape[0]) + "\n")
+    print("Classes: " + str(np.unique(train_y).shape[0]) + "\n")
 
-    print("Perfoming image preprocessing...\n")
 
-    train_x = convert_to_greyscale(train_x)
-    test_x = convert_to_greyscale(test_x)
+    print("Starting training, this is a good time to go get a coffee...\n")
 
-    print("Starting training, this is a good time to go get a coffee...")
-
+    traffic_model = CNNModel()
+    history = traffic_model.train(train_x, train_y)
 
     print("Evaluating performance on our test set...")
 
+    test_x, test_y = import_test_set("../images/Final_Test/")
+    predictions = traffic_model.predict(test_x)
+    test_accuracy = np.sum(predictions == test_y) / predictions.shape[0]
 
+    print("Test accuracy: " + str(test_accuracy))
+
+    plot_loss(history)
+    plot_accuracy(history)
 
 
 if __name__ == '__main__':

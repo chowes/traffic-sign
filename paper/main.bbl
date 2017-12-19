@@ -1,4 +1,8 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{keras_traffic}
+{\sc Chilamkurthy, S.}
+\newblock Keras tutorial - traffic sign recognition.
 
 \bibitem{ciresan_committee_2011}
 {\sc Ciresan, D., Meier, U., Masci, J., and Schmidhuber, J.}
@@ -25,6 +29,19 @@
 \newblock Caad: Computer architecture for autonomous driving.
 \newblock {\em arXiv preprint arXiv:1702.01894\/} (2017).
 
+\bibitem{mathias_traffic_2013}
+{\sc Mathias, M., Timofte, R., Benenson, R., and Gool, L.~V.}
+\newblock Traffic sign recognition \#x2014; {How} far are we from the solution?
+\newblock In {\em The 2013 {International} {Joint} {Conference} on {Neural}
+  {Networks} ({IJCNN})\/} (Aug. 2013), pp.~1--8.
+
+\bibitem{mogelmose_vision-based_2012}
+{\sc Mogelmose, A., Trivedi, M.~M., and Moeslund, T.~B.}
+\newblock Vision-{Based} {Traffic} {Sign} {Detection} and {Analysis} for
+  {Intelligent} {Driver} {Assistance} {Systems}: {Perspectives} and {Survey}.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems 13}, 4
+  (Dec. 2012), 1484--1497.
+
 \bibitem{sermanet_convolutional_2012}
 {\sc Sermanet, P., Chintala, S., and LeCun, Y.}
 \newblock Convolutional neural networks applied to house numbers digit
@@ -50,5 +67,9 @@
 \newblock Man vs. computer: {Benchmarking} machine learning algorithms for
   traffic sign recognition.
 \newblock {\em Neural Networks 32}, Supplement C (Aug. 2012), 323--332.
+
+\bibitem{tensorflow_traffic}
+{\sc Staravoitau, A.}
+\newblock Traffic signs classification with a convolutional network.
 
 \end{thebibliography}

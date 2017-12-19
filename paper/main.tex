@@ -103,13 +103,37 @@ Linear discriminant analysis and support vector machines offer a significant per
 
 As hardware continues to become more powerful, computationally expensive classifiers based on committees of neural networks will likely become an even more attractive approach due to their robustness and accuracy. Indeed, advances in powerful, highly parallel embedded components, such as FPGA, are already seeing use in the automotive industry, are already being used in autonomous driving research \cite{fpga, fpga2}.
 
+Finally, the emergence of ``standard'' benchmarks for traffic sign classification is something that bears consideration. The motivating idea behind benchmarks is that they give researchers and developers a way to assess how well a system performs. The consequence of this is that systems end up being tailored towards high performance on a benchmark rather than on the task they are designed to perform. In the context of machine learning, this could lead to overfitting, such that classifiers perform well on benchmarks but not on real-world examples.
+
+One solution to this is to adopt many different benchmarks, and use classifiers that perform well on all of them. This is solution suits the traffic sign classification problem well, given that different regions have adopted different sets of traffic signs and classifiers need to be trained on data from every region where it is expected to be used. Indeed, a number of public data sets have been released since the GTSRB data set was made public, including the LISA (United States) and BelgiumTS (Belgium) data sets \cite{mathias_traffic_2013, mogelmose_vision-based_2012}. By benchmarking traffic sign classifiers on a diverse set of benchmarks will prevent overfitting and improve generalizability. 
+
+
+
 
 \section{Methodology}
 
-In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a traffic sign classifier based on a 4-layer convolutional neural network and trained it on the German traffic sign detection benchmark data set. 
+In order to validate previous results demonstrating the effectiveness of convolutional neural networks for traffic sign classification, I implemented a simple traffic sign classifier based on a convolutional neural network and evaluated it using the German Traffic Sign Detection Benchmark data set \cite{stallkamp_german_2011, stallkamp_man_2012}. 
 
+\subsection{Architecture}
+
+My approach was similar to the approaches outlined in \cite{sermanet_convolutional_2012, sermanet_traffic_2011}, though the architecture I present here used all colour channels and is purely feed-forward, with the classifier layer connecting only to the final convolutional layer. Similar models have shown high performance in previous replications, including \cite{keras_traffic} and \cite{tensorflow_traffic}, and the simplicity of this architecture makes it an attractive choice for experimentation.
+
+The model is made up of three pairs of feed-forward convolutional layers seperated by $2 \times 2$ max-pooling layers. Each of these pooling layers feeds into a dropout layer which drops $1/4^{th}$ of its inputs. The final set of convolutional, pooling, and dropout layers are flattened and passed into a classifier layer, which feeds into a softmax output layer that returns a probability distribution over the classes for a given input. The prediction for a given input is simply the maximum over this probability distribution.
 
 \section{Results}
+
+When training with only unaltered images provided in the GTSRB data set, my model had an accuracy of 95.42 \% on the test set. This is reasonably high considering the simplicity of the model and lack of data set augmentation, though accuracy is considerably lower than both human performance (98.84 \%) and the performance of other classifiers implemented using CNNs (98.31 \%) \cite{sermanet_convolutional_2012, sermanet_traffic_2011, stallkamp_german_2011, stallkamp_man_2012}. Figure 1 and Figure 2 show the accuracy and loss of the network over 200 training epochs when trained only on unaugmented images provided in the GTSRB data set. 
+
+\begin{figure}
+\includegraphics[width=3.25in]{accuracy}
+\caption{Accuracy over 200 epochs. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=3.25in]{loss}
+\caption{Loss over 200 epochs. Data for ``test'' instances are taken from performance on a validation set at the end of each epoch}
+\end{figure}
+
 
 
 \section{Conclusions}
