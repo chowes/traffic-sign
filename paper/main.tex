@@ -45,21 +45,29 @@
 
 \subsection*{Abstract}
 
-Efficient and accurate classification of traffic signs is necessary for the development of autonomous vehicles and driver assistance systems, and constitutes an interesting computer vision problem with a high degree of real-world relevance. As such, traffic sign classification has enjoyed significant recent attention from the research community, and current techniques are able to meet or surpass human performance in publicly available data sets. Here, I compare successful approaches to traffic sign classification and present the performance of a traffic sign classifier based on a convolutional neural network.
+Efficient and accurate classification of traffic signs constitutes an interesting computer vision problem with a high degree of real-world relevance. Traffic sign recognition is necessary for the development of autonomous vehicles and driver assistance systems, which must be able to correctly detect and classify traffic signs in real-time under varying conditions. As such, traffic sign classification has enjoyed significant recent attention, and current techniques are able to meet or surpass human performance in publicly available data sets. Here, I compare successful approaches to traffic sign classification and present the performance of a traffic sign classifier based on a convolutional neural network.
 
 
 \section{Introduction}
 
-Traffic sign classification is a computer vision problem with a great deal of relevance to current advancements in autonomous vehicles and driver assistance systems. A viable traffic sign classifier must not only detect and categorize signs with a high degree of accuracy, it must perform efficiently, tolerate potentially noisy environments, and perform correctly in the presence of defects or variations in sign appearance. Many techniques have been applied to address the traffic sign classification problem, here we focus on three techniques that exhibited near-human performance on a competitive benchmark: multi-column deep neural networks, convolutional neural networks, and linear discriminant analysis (LDA) on histogram oriented gradients (HOG) features \cite{stallkamp_german_2011, stallkamp_man_2012, ciresan_committee_2011, sermanet_traffic_2011, ciresan_multi-column_2012}.
+Traffic sign classification is a computer vision problem with a great deal of relevance to current advancements in autonomous vehicles and driver assistance systems. A viable traffic sign classifier must not only detect and categorize signs with a high degree of accuracy, it must perform efficiently, tolerate potentially noisy environments, and perform correctly in the presence of defects or variations in sign appearance \cite{stallkamp_german_2011, stallkamp_man_2012}. 
 
+While many techniques have been applied to address the traffic sign classification problem, here I focus on a representative subset of state-of-the-art techniques that exhibit near-human performance in empirical testing: linear discriminant analysis, support vector machines, convolutional neural networks, and committees made up of multiple classifiers.
+
+\section{Benchmarks}
+
+The techniques discussed here were selected from high performing approaches entered into the German Traffic Sign Recognition Benchmark (GTSRB) competition, or developed and tested on this dataset after the conclusion of the competition \cite{stallkamp_german_2011, stallkamp_man_2012}. This competition provides a high quality data set of traffic sign images split into training and test sets that can be used to design, validate, and compare approaches to traffic sign classification. The data set consists of 34799 training images and 12630 test images comprised of 43 classes. The data set is unbalanced, with class representation ranging from 0.5 \% and 5.5 \% of images \cite{stallkamp_german_2011}.
+
+The German Traffic Sign Recognition Benchmark was originally formulated as a competition in two stages. Following the completion of the final stage, the GTSRB data set was made available online as a public benchmark to drive the development and empirical analysis of new classification algorithms \cite{stallkamp_german_2011, stallkamp_man_2012}. Here, I discuss the performance of classifiers entered at each stage of the competition, as well as other classifiers developed following the conclusion of the competition that provide an analysis based on the GTSRB data set.\footnote{It is worth noting that all of the published classifiers developed after 2012 that I have found as of this writing have provided an analysis using the GTSRB data set, so limiting discussion to approaches using this benchmark does not limit the scope of this paper.} 
 
 \section{Comparison of Techniques}
 
-\subsection{Benchmark}
+\subsection{Features}
 
-The techniques discussed here were selected from high performing approaches entered into the German Traffic Sign Recognition Benchmark competition \cite{stallkamp_german_2011, stallkamp_man_2012}. This competition provides a high quality data set of traffic sign images split into training and test sets that can be used to design, validate, and compare approaches to traffic sign classification. The data set consists of TODO training images and TODO test images comprised of 43 classes. The data set is unbalanced, with class representation ranging from 0.5 \% and 5.5 \% of images.
+Traffic signs are designed to be easy for humans to detect and recognize quickly. In order to accomplish this, signs tend to be made up of distinct shapes, have high contrast lettering or pictograms, and strong colouration for high-importance sign classes (e.g.\ stop signs). The techniques discussed here make use of different feature sets to drive training and classification. 
 
-% TODO: Discuss competition, etc.
+While contrast and colour are fairly easy to define based on RBG and greyscale pixel values, other features are more difficult to represent. In particular, histograms of oriented gradient (HOG) are commonly used by image classification algorithms as a means of determining shape and orientation information. Briefly, the orientation of pixel values across image subregions are computed and combined hierarchically to produce feature vectors representing geometric information about an image \cite{stallkamp_german_2011, stallkamp_man_2012}. A number of other features were preprocessed and made available along with the GTSRB data set, but they were not used in any of the classifiers compared here, so they are not discussed.
+
 
 \subsection{Linear Discriminant Analysis}
 
@@ -68,6 +76,11 @@ Linear discriminant analysis (LDA) ...
 
 % TODO: How is LDA applied to traffic sign classification, how does it perform, etc. 
 
+\subsection{Support Vector Machines}
+
+% TODO: SVMs
+
+
 \subsection{Convolutional Neural Networks}
 
 Convolutional neural networks (CNNs) ...
@@ -75,12 +88,20 @@ Convolutional neural networks (CNNs) ...
 
 % How are CNNs applied to traffic sign classification, examine different implementations, etc.
 
-\subsection{Multi-Column Deep Neural Networks}
+\subsection{Committees}
 
 Multi-column deep neural networks (MCDNNs) ...
 % What are MCDNNs, how do they work, etc. Note that they can involve the use of CNNs so there is some overlap
 
 % How are they applied to traffic sign classification, performance, implementation, etc.
+
+\subsection{Discussion}
+
+In general, methods based on convolutional neural networks have been shown to offer extremely high accuracy, matching or even exceeding human performance \cite{ciresan_committee_2011, ciresan_multi-column_2012, sermanet_convolutional_2012, sermanet_traffic_2011}. This high accuracy comes at the expense of both training and classification time, with large networks requiring days to train. Additionally, access to high-end hardware is necessary in order to achieve real-time classification with a trained model, making it difficult to implement high performant CNNs in embedded hardware that may need to support other computationally expensive functionality such as lane detection \cite{ciresan_committee_2011, ciresan_multi-column_2012, lane-detection}.
+
+Linear discriminant analysis and support vector machines offer a significant performance advantage over neural networks, but at the cost of some accuracy. Although both LDA and SVM based techniques boast higher than 95 \% accuracy, this may not be acceptable for real-world sitations where recognizing and reacting to a sign is critical for passenger safety \cite{}. Moreover, the designers of the GTSRB competition note that some of the human control participants found the interface used to gather human responses was uninituitive and difficult to use \cite{stallkamp_german_2011, stallkamp_man_2012}. As a result, human performance may have been artificially low due to testing conditions, while the nature of the constructed data set was likely advantagous to the classifiers since each test case has a well defined class with none of the ambiguity associated with real-world driving scenarios. Thus, implementations that fail to match human performance in an artificial environment are likely not good candidates for use in real autonomous vehicles or other safety-critical applications.
+
+As hardware continues to become more powerful, computationally expensive classifiers based on committees of neural networks will likely become an even more attractive approach due to their robustness and accuracy. Indeed, advances in powerful, highly parallel embedded components, such as FPGA, are already seeing use in the automotive industry, are already being used in autonomous driving research \cite{fpga, fpga2}.
 
 
 \section{Methodology}
