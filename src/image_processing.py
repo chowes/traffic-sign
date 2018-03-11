@@ -6,9 +6,10 @@ import numpy as np
 import pandas as pd
 from scipy import ndimage
 from skimage import io, color, exposure, transform
+from keras.utils import np_utils
 
 
-def import_training_set(image_dir='../images/Final_Training/Images/', augment_p=0.0):
+def import_training_set(image_dir='../images/Final_Training/Images/'):
     """
     Read images from GTSRB file, uses kind of a hacky fix to get class names. The idea comes from:
     https://chsasank.github.io/keras-tutorial.html
@@ -20,27 +21,22 @@ def import_training_set(image_dir='../images/Final_Training/Images/', augment_p=
     # get all of our image paths
     all_paths = glob.glob(os.path.join(image_dir, '*/*.ppm'))
 
-    # we have to shuffle here since X and Y indices need to match
+    # we have to shuffle here since x and y indices need to match
     np.random.shuffle(all_paths)
 
     for image_path in all_paths:
         image = preprocess_image(io.imread(image_path))
         label = int(image_path.split('/')[-2])
-        # we want to blur images with probability p
-        if random.uniform(0, 1) < augment_p:
-            augmented_image = ndimage.gaussian_filter(image, sigma=3)
-            images.append(augmented_image)
-            labels.append(label)
         images.append(image)
         labels.append(label)
 
     # we need x to be a matrix of 32 bit floats (defined in numpy)
-    X = np.array(images, dtype='float32')
+    x_train = np.array(images, dtype='float32')
 
     # we have to use one-hot encoding
-    Y = np.eye(np.unique(labels).shape[0], dtype='uint8')[labels]
+    y_train = np_utils.to_categorical(labels, np.unique(labels).shape[0])
 
-    return X, Y
+    return x_train, y_train
 
 
 def import_test_set(image_dir='../images/Final_Training/'):

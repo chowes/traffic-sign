@@ -118,6 +118,8 @@ ENV/
 
 # Image sets
 images/*
+lisa/*
+*.png
 
 # Models
 *.h5
